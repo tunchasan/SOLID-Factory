@@ -4,13 +4,14 @@ namespace InputSystem
 {
     public class KeyboardInput : Input, IEditableInput
     {
-        public bool IsActivated { get; private set; } = false;
+        public bool IsActivated { get; private set; } = true;
 
         #region Private Fields
 
         private float _horizontalAxis = 0F;
         private float _verticalAxis = 0F;
-
+        private bool _isHolding = false;
+        
         #endregion
         
         private void Update()
@@ -19,12 +20,6 @@ namespace InputSystem
             {
                 _horizontalAxis = UnityEngine.Input.GetAxis("Horizontal");
                 _verticalAxis = UnityEngine.Input.GetAxis("Vertical");
-            }
-            
-            else
-            {
-                _horizontalAxis = 0F;
-                _verticalAxis = 0F;
             }
         }
         

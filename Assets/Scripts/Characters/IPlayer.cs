@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Characters
 {
-    public class Tank : IPlayer
+    public class IPlayer : MonoBehaviour
     {
         // TODO
     }

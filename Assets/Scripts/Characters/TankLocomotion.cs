@@ -1,5 +1,6 @@
 using InputSystem;
 using MovementSystem;
+using UnityEngine;
 
 namespace Characters
 {
@@ -10,59 +11,79 @@ namespace Characters
             input = GetComponent<IInput>();
         }
 
+        private void Start()
+        {
+            StartMovement();
+            StartRotation();
+        }
+
         private void Update()
         {
-            // TODO
+            ProcessMovement();
+            ProcessRotation();
         }
 
+        #region Movement
+
+        private bool _shouldMove = false;
         public bool CanMove()
         {
-            throw new System.NotImplementedException();
+            return _shouldMove;
         }
-
-        public bool IsMoving()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public void StartMovement()
         {
-            throw new System.NotImplementedException();
+            _shouldMove = true;
         }
-
         public void ProcessMovement()
         {
-            throw new System.NotImplementedException();
+            if (CanMove())
+            {
+                var velocity = input.Direction() * (Time.deltaTime * 5F);
+
+                transform.position += (Vector3) velocity;
+            }
         }
 
         public void StopMovement()
         {
-            throw new System.NotImplementedException();
+            _shouldMove = false;
         }
 
+        #endregion
+
+        #region Rotation
+
+        private bool _shouldRotate = false;
+        
         public bool CanRotate()
         {
-            throw new System.NotImplementedException();
-        }
-
-        public bool IsRotating()
-        {
-            throw new System.NotImplementedException();
+            return _shouldRotate;
         }
 
         public void StartRotation()
         {
-            throw new System.NotImplementedException();
+            _shouldRotate = true;
         }
 
         public void ProcessRotation()
         {
-            throw new System.NotImplementedException();
+            if (CanRotate())
+            {
+                var currentRotation = transform.eulerAngles;
+                
+                var targetRotation = Quaternion.Euler(new Vector3(0, 
+                    0, Mathf.Atan2(input.Direction().y, input.Direction().x) * 180 / Mathf.PI));
+
+                transform.eulerAngles = Vector3.Lerp(currentRotation, 
+                    targetRotation.eulerAngles, Time.deltaTime * 5F);
+            }
         }
 
         public void StopRotation()
         {
-            throw new System.NotImplementedException();
+            _shouldRotate = false;
         }
+
+        #endregion
     }
 }
