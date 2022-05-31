@@ -4,9 +4,18 @@ namespace InputSystem
 {
     public class GamepadInput : Input
     {
-        public override Vector2 Direction()
+        private void Update()
         {
-            throw new System.NotImplementedException();
+            ProcessInput();
+        }
+
+        protected override void ProcessInput()
+        {
+            var horizontalInput = UnityEngine.Input.GetAxis("Horizontal");
+            var verticalInput = UnityEngine.Input.GetAxis("Vertical");
+            var current = Direction;
+            var target = new Vector2(horizontalInput, verticalInput);
+            Direction = Vector2.Lerp(current, target, Time.deltaTime * 5F);
         }
     }
 }

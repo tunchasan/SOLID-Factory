@@ -2,21 +2,9 @@ using UnityEngine;
 
 namespace InputSystem
 {
-    public abstract class Input : MonoBehaviour, IInput
+    public abstract class Input : MonoBehaviour
     {
-        public void Activate()
-        {
-            IsActivated = true;
-        }
-
-        public void Deactivate()
-        {
-            IsActivated = false;
-        }
-        
-        public bool IsActivated { get; private set; } = true;
-
-        public abstract Vector2 Direction();
-
+        public Vector2 Direction { get; protected set; }
+        protected abstract void ProcessInput();
     }
 }

@@ -1,10 +1,10 @@
-using InputSystem;
 using UnityEngine;
+using Input = InputSystem.Input;
 
 namespace MovementSystem
 {
     public abstract class Locomotion : MonoBehaviour
     {
-        protected IInput input = null;
+        protected Input input = null;
     }
 }

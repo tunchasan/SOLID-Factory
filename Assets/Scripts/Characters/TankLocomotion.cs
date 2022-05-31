@@ -1,6 +1,6 @@
-using InputSystem;
 using MovementSystem;
 using UnityEngine;
+using Input = InputSystem.Input;
 
 namespace Characters
 {
@@ -8,7 +8,7 @@ namespace Characters
     {
         private void Awake()
         {
-            input = GetComponent<IInput>();
+            input = GetComponent<Input>();
         }
 
         private void Start()
@@ -38,7 +38,7 @@ namespace Characters
         {
             if (CanMove())
             {
-                var velocity = input.Direction() * (Time.deltaTime * 5F);
+                var velocity = input.Direction * (Time.deltaTime * 5F);
 
                 transform.position += (Vector3) velocity;
             }
@@ -72,7 +72,7 @@ namespace Characters
                 var currentRotation = transform.eulerAngles;
                 
                 var targetRotation = Quaternion.Euler(new Vector3(0, 
-                    0, Mathf.Atan2(input.Direction().y, input.Direction().x) * 180 / Mathf.PI));
+                    0, Mathf.Atan2(input.Direction.y, input.Direction.x) * 180 / Mathf.PI));
 
                 transform.eulerAngles = Vector3.Lerp(currentRotation, 
                     targetRotation.eulerAngles, Time.deltaTime * 5F);

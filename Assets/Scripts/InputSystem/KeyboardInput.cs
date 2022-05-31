@@ -4,38 +4,16 @@ namespace InputSystem
 {
     public class KeyboardInput : Input
     {
-        public bool IsActivated { get; private set; } = true;
-
-        #region Private Fields
-
-        private float _horizontalAxis = 0F;
-        private float _verticalAxis = 0F;
-        private bool _isHolding = false;
-        
-        #endregion
-        
         private void Update()
         {
-            if (IsActivated)
-            {
-                _horizontalAxis = UnityEngine.Input.GetAxis("Horizontal");
-                _verticalAxis = UnityEngine.Input.GetAxis("Vertical");
-            }
-        }
-        
-        public void Activate()
-        {
-            IsActivated = true;
+            ProcessInput();
         }
 
-        public void Deactivate()
+        protected override void ProcessInput()
         {
-            IsActivated = false;
-        }
-
-        public override Vector2 Direction()
-        {
-            return new Vector2(_horizontalAxis, _verticalAxis);
+            var horizontalInput = UnityEngine.Input.GetAxis("Horizontal");
+            var verticalInput = UnityEngine.Input.GetAxis("Vertical");
+            Direction = new Vector2(horizontalInput, verticalInput);
         }
     }
 }
