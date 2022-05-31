@@ -4,6 +4,9 @@ namespace InputSystem
 {
     public interface IInput
     {
-        public Vector2 Direction();
+        bool IsActivated { get; }
+        void Activate();
+        void Deactivate();
+        Vector2 Direction();
     }
 }

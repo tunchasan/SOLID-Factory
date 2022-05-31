@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace InputSystem
 {
-    public class KeyboardInput : Input, IEditableInput
+    public class KeyboardInput : Input
     {
         public bool IsActivated { get; private set; } = true;
 
