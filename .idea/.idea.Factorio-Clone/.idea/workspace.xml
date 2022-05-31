@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e4d6c6a3-25a5-4d09-b7cb-4150a8f4180e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputSystem/GamepadInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovementSystem/Locomotion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Tank.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DetectorSystem/IDetector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Characters/IPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DetectorSystem/IDetectable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StorageSystem/SourceStorage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Detector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StorageSystem/IStorable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputSystem/IEditableInput.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/IPlayer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MovementSystem/IMovable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MovementSystem/IRotatable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InputSystem/KeyboardInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InputSystem/Input.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InputSystem/IInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/TankLocomotion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InputSystem/GamepadInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Detector.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/SourceDetector.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/IDetectable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/SourceDetector.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/IDetector.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Detector.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Tank.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StorageSystem/IStorable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StorageSystem/SourceStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StorageSystem/Storage.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
