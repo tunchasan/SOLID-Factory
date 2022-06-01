@@ -798,6 +798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1098230648}
   - component: {fileID: 1098230647}
+  - component: {fileID: 1098230649}
   m_Layer: 0
   m_Name: GameSettings
   m_TagString: Untagged
@@ -814,10 +815,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1098230646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60ecfbdb8b2d483b9afee8d7c8bdbc2d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2775758038a04b72948ee3c700a7dca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllerType: 1
 --- !u!4 &1098230648
 Transform:
   m_ObjectHideFlags: 0
@@ -832,6 +832,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1098230649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098230646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ecfbdb8b2d483b9afee8d7c8bdbc2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerType: 1
 --- !u!1001 &1556233933
 PrefabInstance:
   m_ObjectHideFlags: 0

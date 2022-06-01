@@ -19,8 +19,6 @@ namespace InputControllerSystem.Settings
         {
             switch (controllerType)
             {
-                case ControllerType.None:
-                    break;
                 case ControllerType.Gamepad:
                     gameObject.AddComponent<GamepadController>();
                     break;

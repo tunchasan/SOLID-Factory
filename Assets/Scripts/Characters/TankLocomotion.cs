@@ -1,4 +1,3 @@
-using InputControllerSystem.Base;
 using MovementSystem;
 using UnityEngine;
 
@@ -10,7 +9,6 @@ namespace Characters
         
         private void Awake()
         {
-            inputController = GetComponent<InputController>();
             _rigidbody2D = GetComponent<Rigidbody2D>();
         }
 
@@ -41,7 +39,7 @@ namespace Characters
         {
             if (CanMove())
             {
-                _rigidbody2D.velocity = inputController.MovementInput * (100F * Time.fixedDeltaTime);
+                //_rigidbody2D.velocity = InputController.MovementInput * (100F * Time.fixedDeltaTime);
             }
         }
 
@@ -68,8 +66,8 @@ namespace Characters
 
         public void ProcessRotation()
         {
-            var angle = Mathf.Atan2(inputController.RotationInput.y, inputController.RotationInput.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            // var angle = Mathf.Atan2(InputController.RotationInput.y, InputController.RotationInput.x) * Mathf.Rad2Deg;
+            // transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
 
         public void StopRotation()
