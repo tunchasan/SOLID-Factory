@@ -5,16 +5,18 @@ namespace SettingSystem
 {
     public abstract class GameSettingsBase : MonoBehaviour
     {
-        private static InputControllerSettingsBase _inputSettings = null;
+        public InputControllerSettingsBase InputSettings { get; private set; } = null;
 
-        private void Awake()
+        public void Initialize()
         {
-            _inputSettings = GetComponent<InputControllerSettings>();
+            InputSettings = GetComponent<InputControllerSettings>();
             
-            if (_inputSettings == null)
+            if (InputSettings == null)
             {
-                _inputSettings = gameObject.AddComponent<InputControllerSettings>();
+                InputSettings = gameObject.AddComponent<InputControllerSettings>();
             }
+            
+            InputSettings.Initialize();
         }
     }
 }

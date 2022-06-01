@@ -1,4 +1,5 @@
 using System;
+using InputControllerSystem.Base;
 using InputControllerSystem.Enums;
 using InputControllerSystem.Gamepad;
 using InputControllerSystem.KeyboardMouse;
@@ -10,20 +11,17 @@ namespace InputControllerSystem.Settings
     {
         [SerializeField] private ControllerType controllerType;
 
-        private void Awake()
-        {
-            InitializeController();
-        }
-        
-        private void InitializeController()
+        public InputController Controller { get; private set; } = null;
+
+        public void Initialize()
         {
             switch (controllerType)
             {
                 case ControllerType.Gamepad:
-                    gameObject.AddComponent<GamepadController>();
+                    Controller = gameObject.AddComponent<GamepadController>();
                     break;
                 case ControllerType.KeyboardMouse:
-                    gameObject.AddComponent<KeyboardMouseController>();
+                    Controller = gameObject.AddComponent<KeyboardMouseController>();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
