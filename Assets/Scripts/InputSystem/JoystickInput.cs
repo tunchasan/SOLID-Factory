@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace InputSystem
 {
-    public class GamepadInput : Input
+    public class JoystickInput : Input
     {
         private void Update()
         {

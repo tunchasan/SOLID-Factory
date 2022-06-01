@@ -11,9 +11,11 @@ namespace InputSystem
         
         protected override void ProcessInput()
         {
-            var horizontalInput = UnityEngine.Input.GetAxis("Mouse X");
-            var verticalInput = UnityEngine.Input.GetAxis("Mouse Y");
-            Direction = new Vector2(horizontalInput, verticalInput).normalized;
+            var mainCamera = Camera.main;
+            if(mainCamera == null) return;
+            var mousePosition = UnityEngine.Input.mousePosition;
+            Direction = new Vector3(mousePosition.x, mousePosition.y) - 
+                        mainCamera.WorldToScreenPoint(transform.position);
         }
     }
 }

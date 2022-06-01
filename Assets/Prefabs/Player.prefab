@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &782251665
 Transform:
   m_ObjectHideFlags: 0
@@ -55,7 +55,8 @@ GameObject:
   - component: {fileID: 8750647509414441448}
   - component: {fileID: 533326093}
   - component: {fileID: 533326094}
-  - component: {fileID: 2098227798}
+  - component: {fileID: 855628008}
+  - component: {fileID: 855628007}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -104,18 +105,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24702397e9bb2e4a9574bf01ab7f8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2098227798
-MonoBehaviour:
+--- !u!50 &855628008
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750647509414441451}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &855628007
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8750647509414441451}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 790a0720e1d57194d8664887fa37c7cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.35
 --- !u!1 &8750647510528913531
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +234,10 @@ PrefabInstance:
     - target: {fileID: 694378862325360286, guid: 4252b58745049c54386240a9f989fd46, type: 3}
       propertyPath: m_Name
       value: Detector
+      objectReference: {fileID: 0}
+    - target: {fileID: 694378862325360286, guid: 4252b58745049c54386240a9f989fd46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 694378862325360287, guid: 4252b58745049c54386240a9f989fd46, type: 3}
       propertyPath: m_RootOrder

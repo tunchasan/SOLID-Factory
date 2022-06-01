@@ -1,14 +1,17 @@
+using InputControllerSystem.Base;
 using MovementSystem;
 using UnityEngine;
-using Input = InputSystem.Input;
 
 namespace Characters
 {
     public class TankLocomotion : Locomotion, IMovable, IRotatable
     {
+        private Rigidbody2D _rigidbody2D = null;
+        
         private void Awake()
         {
-            input = GetComponent<Input>();
+            inputController = GetComponent<InputController>();
+            _rigidbody2D = GetComponent<Rigidbody2D>();
         }
 
         private void Start()
@@ -17,7 +20,7 @@ namespace Characters
             StartRotation();
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             ProcessMovement();
             ProcessRotation();
@@ -38,9 +41,7 @@ namespace Characters
         {
             if (CanMove())
             {
-                var velocity = input.Direction * (Time.deltaTime * 5F);
-
-                transform.position += (Vector3) velocity;
+                _rigidbody2D.velocity = inputController.MovementInput * (100F * Time.fixedDeltaTime);
             }
         }
 
@@ -67,16 +68,8 @@ namespace Characters
 
         public void ProcessRotation()
         {
-            if (CanRotate())
-            {
-                var currentRotation = transform.eulerAngles;
-                
-                var targetRotation = Quaternion.Euler(new Vector3(0, 
-                    0, Mathf.Atan2(input.Direction.y, input.Direction.x) * 180 / Mathf.PI));
-
-                transform.eulerAngles = Vector3.Lerp(currentRotation, 
-                    targetRotation.eulerAngles, Time.deltaTime * 5F);
-            }
+            var angle = Mathf.Atan2(inputController.RotationInput.y, inputController.RotationInput.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
 
         public void StopRotation()
