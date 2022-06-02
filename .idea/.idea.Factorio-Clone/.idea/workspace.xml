@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4d6c6a3-25a5-4d09-b7cb-4150a8f4180e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Base.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Enums.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Enums/ControllerType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Enums/ControllerType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Settings.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Settings/InputControllerSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Settings/InputControllerSettings.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Settings/InputControllerSettingsBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Settings/InputControllerSettingsBase.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Factorio-Clone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Factorio-Clone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/TankLocomotion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/TankLocomotion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputSystem/GamepadInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputSystem/JoystickInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputSystem/GamepadInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputSystem/JoystickInput.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputSystem/MouseInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputSystem/MouseInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovementSystem/Locomotion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MovementSystem/Locomotion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InstallerSystem/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InstallerSystem/GameInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SettingSystem.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SettingSystem/GameSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SettingSystem/GameSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SettingSystem/GameSettingsBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SettingSystem/GameSettingsBase.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +59,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/KeyboardMouse/KeyboardMouseController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Gamepad/GamepadController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MovementSystem/Locomotion.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/TankLocomotion.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InputSystem/MouseInput.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/InputController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Gamepad/GamepadControllerBase.cs" />
@@ -80,6 +70,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Settings/ControllerSettingsBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Settings/InputControllerSettingsBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Settings/InputControllerSettings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/TankLocomotion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InstallerSystem/GameInstaller.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="29xMfPDgfva7UU8lVxKaO6BbJNz" />

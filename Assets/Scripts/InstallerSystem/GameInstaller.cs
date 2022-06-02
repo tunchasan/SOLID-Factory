@@ -1,5 +1,5 @@
 using InputControllerSystem.Base;
-using SettingSystem;
+using InputControllerSystem.Settings;
 using UnityEngine;
 using Zenject;
 
@@ -7,13 +7,12 @@ namespace InstallerSystem
 {
     public class GameInstaller : MonoInstaller
     {
-        [SerializeField] private GameSettingsBase gameSettings = null;
+        [SerializeField] private InputControllerSettingsBase inputSetting = null;
         
         public override void InstallBindings()
         {
-            gameSettings.Initialize();
-            Container.Bind<GameSettingsBase>().AsSingle();
-            Container.Bind<InputController>().FromInstance(gameSettings.InputSettings.Controller).AsSingle();
+            inputSetting.Initialize();
+            Container.Bind<InputController>().FromInstance(inputSetting.Controller).AsSingle().NonLazy();
         }
     }
 }
