@@ -53,12 +53,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8750647509414441448}
-  - component: {fileID: 533326093}
-  - component: {fileID: 533326094}
+  - component: {fileID: 9095767907590097984}
+  - component: {fileID: 3576803927338279267}
   - component: {fileID: 855628008}
   - component: {fileID: 855628007}
   m_Layer: 0
-  m_Name: Player
+  m_Name: DynamicTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &533326093
+--- !u!114 &9095767907590097984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,10 +90,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8750647509414441451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d25ecfac8f6f364b9f91ebddaaff653, type: 3}
+  m_Script: {fileID: 11500000, guid: ebdc11a93a704edb9244b5f20a245077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &533326094
+--- !u!114 &3576803927338279267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8750647509414441451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d24702397e9bb2e4a9574bf01ab7f8aa, type: 3}
+  m_Script: {fileID: 11500000, guid: c63eddfe59944bd3aa873a79be6b1cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &855628008
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 8750647510528913528}
   - component: {fileID: 8750647510528913529}
   m_Layer: 0
-  m_Name: Tank
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

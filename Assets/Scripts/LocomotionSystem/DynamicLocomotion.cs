@@ -3,22 +3,20 @@ using MovementSystem;
 using UnityEngine;
 using Zenject;
 
-namespace Characters
+namespace LocomotionSystem
 {
-    public class TankLocomotion : Locomotion, IMovable, IRotatable
+    public class DynamicLocomotion : Locomotion, IMovable, IRotatable
     {
-        private Rigidbody2D _rigidbody2D = null;
-        private InputController _input = null;
-        
+        protected override InputController Input { get; set; }
+
         [Inject]
-        public void Initialize(InputController input)
+        public override void Initialize(InputController input)
         {
-            _input = input;
+            base.Initialize(input);
             _rigidbody2D = GetComponent<Rigidbody2D>();
             StartMovement();
             StartRotation();
         }
-
         private void FixedUpdate()
         {
             ProcessMovement();
@@ -26,6 +24,8 @@ namespace Characters
         }
 
         #region Movement
+
+        private Rigidbody2D _rigidbody2D = null;
         public bool CanMove { get; private set; }
         public void StartMovement()
         {
@@ -35,7 +35,7 @@ namespace Characters
         {
             if (CanMove)
             {
-                _rigidbody2D.velocity = _input.MovementInput * (100F * Time.fixedDeltaTime);
+                _rigidbody2D.velocity = Input.MovementInput * (100F * Time.fixedDeltaTime);
             }
         }
         public void StopMovement()
@@ -55,7 +55,7 @@ namespace Characters
         {
             if (CanRotate)
             {
-                var angle = Mathf.Atan2(_input.RotationInput.y, _input.RotationInput.x) * Mathf.Rad2Deg;
+                var angle = Mathf.Atan2(Input.RotationInput.y, Input.RotationInput.x) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             }
         }

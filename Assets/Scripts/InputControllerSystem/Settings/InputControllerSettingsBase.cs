@@ -4,6 +4,7 @@ using InputControllerSystem.Enums;
 using InputControllerSystem.Gamepad;
 using InputControllerSystem.KeyboardMouse;
 using UnityEngine;
+using Zenject;
 
 namespace InputControllerSystem.Settings
 {
@@ -13,6 +14,7 @@ namespace InputControllerSystem.Settings
 
         public InputController Controller { get; private set; } = null;
 
+        [Inject]
         public void Initialize()
         {
             switch (controllerType)
