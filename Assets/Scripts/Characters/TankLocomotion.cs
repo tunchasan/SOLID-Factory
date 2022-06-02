@@ -9,13 +9,12 @@ namespace Characters
     {
         private Rigidbody2D _rigidbody2D = null;
         private InputController _input = null;
-
+        
         [Inject]
         public void Initialize(InputController input)
         {
-            _rigidbody2D = GetComponent<Rigidbody2D>();
             _input = input;
-            
+            _rigidbody2D = GetComponent<Rigidbody2D>();
             StartMovement();
             StartRotation();
         }
@@ -27,54 +26,42 @@ namespace Characters
         }
 
         #region Movement
-
-        private bool _shouldMove = false;
-        public bool CanMove()
-        {
-            return _shouldMove;
-        }
+        public bool CanMove { get; private set; }
         public void StartMovement()
         {
-            _shouldMove = true;
+            CanMove = true;
         }
         public void ProcessMovement()
         {
-            if (CanMove())
+            if (CanMove)
             {
                 _rigidbody2D.velocity = _input.MovementInput * (100F * Time.fixedDeltaTime);
             }
         }
-
         public void StopMovement()
         {
-            _shouldMove = false;
+            CanMove = false;
         }
 
         #endregion
 
         #region Rotation
-
-        private bool _shouldRotate = false;
-        
-        public bool CanRotate()
-        {
-            return _shouldRotate;
-        }
-
+        public bool CanRotate { get; private set; }
         public void StartRotation()
         {
-            _shouldRotate = true;
+            CanRotate = true;
         }
-
         public void ProcessRotation()
         {
-            var angle = Mathf.Atan2(_input.RotationInput.y, _input.RotationInput.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            if (CanRotate)
+            {
+                var angle = Mathf.Atan2(_input.RotationInput.y, _input.RotationInput.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            }
         }
-
         public void StopRotation()
         {
-            _shouldRotate = false;
+            CanRotate = false;
         }
 
         #endregion
