@@ -1,3 +1,4 @@
+using DropSystem.Base;
 using SourceSystem.Base;
 using StorageSystem.Base;
 using StorageSystem.Utilities;
@@ -5,7 +6,7 @@ using UnityEngine;
 
 namespace SourceSystem.Class
 {
-    public class StorableSource : SourceBase, IStorable
+    public class InteractableSource : SourceBase, IStorable, IDroppable
     {
         public StorageType Type { get; protected set; } = StorageType.Source;
         

@@ -8,6 +8,5 @@ namespace StorageSystem.Base
     {
         StorageType Type { get; }
         void PossesBy(Transform instigator);
-        void UnPossesBy();
     }
 }

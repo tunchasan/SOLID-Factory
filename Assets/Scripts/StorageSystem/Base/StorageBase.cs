@@ -7,14 +7,14 @@ namespace StorageSystem.Base
     public abstract class StorageBase : MonoBehaviour
     {
         protected abstract StorageType Type { get; set; }
-    
-        private readonly List<IStorable> _storages = new List<IStorable>();
+
+        public List<IStorable> Storages { get; protected set; } = new List<IStorable>();
 
         public bool StoreElement(IStorable elem)
         {
             if (CanStoreElement(elem))
             {
-                _storages.Add(elem);
+                Storages.Add(elem);
                 elem.PossesBy(transform);
                 return true;
             }
@@ -24,7 +24,7 @@ namespace StorageSystem.Base
 
         private bool CanStoreElement(IStorable elem)
         {
-            return !_storages.Contains(elem) 
+            return !Storages.Contains(elem) 
                    &&
                    elem != null
                    &&

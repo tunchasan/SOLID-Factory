@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2087988190618322006}
   - component: {fileID: 8231564236211892718}
   m_Layer: 0
-  m_Name: Storage
+  m_Name: Storager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,13 +153,12 @@ Transform:
   m_GameObject: {fileID: 6905221207282572599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6905221207794064748}
   - {fileID: 853929328193222817}
   - {fileID: 2087988190618322006}
   - {fileID: 6905221207439133859}
-  - {fileID: 6905221207775895941}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -217,8 +216,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6905221207439133859}
+  - component: {fileID: 1766881902276298509}
   m_Layer: 0
-  m_Name: CanDropSomething
+  m_Name: Dropper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,36 +238,18 @@ Transform:
   m_Father: {fileID: 6905221207282572602}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6905221207775895940
-GameObject:
+--- !u!114 &1766881902276298509
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6905221207775895941}
-  m_Layer: 0
-  m_Name: CanDynamicLocomotion
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6905221207775895941
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6905221207775895940}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6905221207282572602}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 6905221207439133858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da6a371552e00ad42bb106e157e5b5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6905221207794064747
 GameObject:
   m_ObjectHideFlags: 0
