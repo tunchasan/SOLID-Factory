@@ -19,5 +19,10 @@ namespace SourceSystem.Class
         {
             transform.SetParent(null);
         }
+
+        public GameObject GetTarget()
+        {
+            return gameObject;
+        }
     }
 }

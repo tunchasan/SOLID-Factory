@@ -4,25 +4,34 @@ using UnityEngine;
 
 namespace DropSystem.Base
 {
-    public class DropperBase : MonoBehaviour
+    public abstract class DropperBase : MonoBehaviour
     {
         public Action OnDetectDropArea;
         
-        public void DropElements(List<IDroppable> elements)
+        public void DropElements(List<GameObject> elements)
         {
             foreach (var elem in elements)
             {
-                elem.UnPossesBy();
+                var droppableElem = elem.GetComponent<IDroppable>();
+                
+                if (CanDropElement(droppableElem))
+                {
+                    droppableElem.UnPossesBy();
+                }
             }
+        }
+
+        protected virtual bool CanDropElement(IDroppable elem)
+        {
+            return elem != null;
         }
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            // TODO
-            
-            // Check if it's DropArea
-            
-            // Invoke OnDetectDropArea
+            if (col.CompareTag("DropArea-Dummy"))
+            {
+                OnDetectDropArea?.Invoke();
+            }
         }
     }
 }

@@ -8,13 +8,13 @@ namespace StorageSystem.Base
     {
         protected abstract StorageType Type { get; set; }
 
-        public List<IStorable> Storages { get; protected set; } = new List<IStorable>();
+        public List<GameObject> Storages { get; protected set; } = new List<GameObject>();
 
         public bool StoreElement(IStorable elem)
         {
             if (CanStoreElement(elem))
             {
-                Storages.Add(elem);
+                Storages.Add(elem.GetTarget());
                 elem.PossesBy(transform);
                 return true;
             }
@@ -22,11 +22,11 @@ namespace StorageSystem.Base
             return false;
         }
 
-        private bool CanStoreElement(IStorable elem)
+        protected virtual bool CanStoreElement(IStorable elem)
         {
-            return !Storages.Contains(elem) 
+            return elem != null 
                    &&
-                   elem != null
+                   !Storages.Contains(elem.GetTarget())
                    &&
                    elem.Type == Type;
         }

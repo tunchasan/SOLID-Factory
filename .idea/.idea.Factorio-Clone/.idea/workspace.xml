@@ -3,17 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="e4d6c6a3-25a5-4d09-b7cb-4150a8f4180e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Factorio-Clone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Factorio-Clone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/EnvironmentPresets/Environments.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/EnvironmentPresets/Environments.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/TankPresets/Heavy Tank.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TankPresets/Heavy Tank.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TankPresets/Mobile Tank.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TankPresets/Mobile Tank.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TankPresets/Stable Tank.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TankPresets/Stable Tank.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/StorableSource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/InteractableSource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/StorableSource.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/InteractableSource.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StorageSystem/Base/IStorable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StorageSystem/Base/IStorable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Base/IDetectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Base/IDetectable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DropSystem/Base/DropperBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DropSystem/Base/DropperBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/InteractableSource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/InteractableSource.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/StorageSystem/Base/StorageBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StorageSystem/Base/StorageBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TankSystem/Class/HeavyTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TankSystem/Class/HeavyTank.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +136,7 @@
       <updated>1654050392010</updated>
       <workItem from="1654050417484" duration="4687000" />
       <workItem from="1654105353261" duration="1182000" />
-      <workItem from="1654783965324" duration="16883000" />
+      <workItem from="1654783965324" duration="18468000" />
     </task>
     <servers />
   </component>

@@ -39,7 +39,11 @@ namespace TankSystem.Class
 
         private void OnDrop()
         {
-            // _dropper.DropElements(_storage.Storages);
+            _dropper.DropElements(_storage.Storages);
+            
+            // TODO
+            
+            // Remove dropped storage elements
         }
     }
 }
