@@ -522,6 +522,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mobile Tank
       objectReference: {fileID: 0}
+    - target: {fileID: 3792699758396203887, guid: f5156e18d611f294289ccd1f0fbf9b3d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5156e18d611f294289ccd1f0fbf9b3d, type: 3}
 --- !u!1001 &6905221207880390096
@@ -591,6 +595,10 @@ PrefabInstance:
     - target: {fileID: 7348780055421359337, guid: 0eb53773266c563478f5f5d8950f345c, type: 3}
       propertyPath: m_Name
       value: Stable Tank
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348780055421359337, guid: 0eb53773266c563478f5f5d8950f345c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7348780055421359342, guid: 0eb53773266c563478f5f5d8950f345c, type: 3}
       propertyPath: m_RootOrder

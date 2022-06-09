@@ -1,4 +1,4 @@
-namespace DetectorSystem
+namespace DetectorSystem.Base
 {
     public interface IDetectable
     {

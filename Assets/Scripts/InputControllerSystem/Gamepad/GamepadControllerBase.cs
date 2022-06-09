@@ -1,11 +1,13 @@
 using InputControllerSystem.Base;
 using InputSystem;
+using InputSystem.Base;
+using InputSystem.Class;
 
 namespace InputControllerSystem.Gamepad
  {
      public abstract class GamepadControllerBase : InputController
      {
-         private Input _gamepadInput = null;
+         private InputBase _gamepadInput = null;
  
          private void Awake()
          {

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace DetectorSystem
+namespace DetectorSystem.Base
 {
     [RequireComponent(typeof(CircleCollider2D), 
         typeof(Rigidbody2D))]
@@ -9,9 +9,9 @@ namespace DetectorSystem
     {
         public Action<IDetectable> OnDetectSomething;
 
-        public void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter2D(Collider2D col)
         {
-            if (other.TryGetComponent(out IDetectable target))
+            if (col.TryGetComponent(out IDetectable target))
             {
                 OnDetectSomething?.Invoke(target);
             }
