@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace LocomotionSystem
 {
-    public abstract class Locomotion : MonoBehaviour
+    public abstract class LocomotionBase : MonoBehaviour
     {
         protected abstract InputController Input { get;  set; }
         

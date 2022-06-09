@@ -5,7 +5,8 @@ using Zenject;
 
 namespace LocomotionSystem
 {
-    public class StableLocomotion : Locomotion, IRotatable
+    [RequireComponent(typeof(Rigidbody2D))]
+    public class MobileLocomotionBase : LocomotionBase, IMovable, IRotatable
     {
         protected override InputController Input { get; set; }
 
@@ -13,12 +14,37 @@ namespace LocomotionSystem
         public override void Initialize(InputController input)
         {
             base.Initialize(input);
+            _rigidbody2D = GetComponent<Rigidbody2D>();
+            StartMovement();
             StartRotation();
         }
-        private void Update()
+        private void FixedUpdate()
         {
+            ProcessMovement();
             ProcessRotation();
         }
+
+        #region Movement
+
+        private Rigidbody2D _rigidbody2D = null;
+        public bool CanMove { get; private set; }
+        public void StartMovement()
+        {
+            CanMove = true;
+        }
+        public void ProcessMovement()
+        {
+            if (CanMove)
+            {
+                _rigidbody2D.velocity = Input.MovementInput * (100F * Time.fixedDeltaTime);
+            }
+        }
+        public void StopMovement()
+        {
+            CanMove = false;
+        }
+
+        #endregion
 
         #region Rotation
         public bool CanRotate { get; private set; }
@@ -34,12 +60,11 @@ namespace LocomotionSystem
                 transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             }
         }
-        
         public void StopRotation()
         {
             CanRotate = false;
         }
-        
+
         #endregion
     }
 }

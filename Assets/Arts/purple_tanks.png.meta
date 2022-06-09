@@ -1,0 +1,1944 @@
+fileFormatVersion: 2
+guid: f1d34e2c0d607d6468de028b7c5bf3dc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7712171402612038594
+    second: purple_tanks_0
+  - first:
+      213: -2902811577084457268
+    second: purple_tanks_1
+  - first:
+      213: 5518494466358553385
+    second: purple_tanks_2
+  - first:
+      213: 8907785866191838580
+    second: purple_tanks_3
+  - first:
+      213: 5343868197415346375
+    second: purple_tanks_4
+  - first:
+      213: -6481056974145565631
+    second: purple_tanks_5
+  - first:
+      213: -7033168417401524632
+    second: purple_tanks_6
+  - first:
+      213: -5760692667813770431
+    second: purple_tanks_7
+  - first:
+      213: 9151636860313243373
+    second: purple_tanks_8
+  - first:
+      213: -833501011162118491
+    second: purple_tanks_9
+  - first:
+      213: -8578308903023909585
+    second: purple_tanks_10
+  - first:
+      213: 219008422830814388
+    second: purple_tanks_11
+  - first:
+      213: -2177279285421339035
+    second: purple_tanks_12
+  - first:
+      213: 5720020633661328618
+    second: purple_tanks_13
+  - first:
+      213: 1570052066355444212
+    second: purple_tanks_14
+  - first:
+      213: -8979843888675617240
+    second: purple_tanks_15
+  - first:
+      213: -3750284003423684899
+    second: purple_tanks_16
+  - first:
+      213: -5898835367256736366
+    second: purple_tanks_17
+  - first:
+      213: -7493220348393264179
+    second: purple_tanks_18
+  - first:
+      213: 8741813091467130274
+    second: purple_tanks_19
+  - first:
+      213: 7968447137051941723
+    second: purple_tanks_20
+  - first:
+      213: 8728947343076452580
+    second: purple_tanks_21
+  - first:
+      213: -3828028209474269807
+    second: purple_tanks_22
+  - first:
+      213: 5058696994734787381
+    second: purple_tanks_23
+  - first:
+      213: 3606351394524667466
+    second: purple_tanks_24
+  - first:
+      213: -6154052658956135897
+    second: purple_tanks_25
+  - first:
+      213: -437334145123255800
+    second: purple_tanks_26
+  - first:
+      213: -3500228110688344004
+    second: purple_tanks_27
+  - first:
+      213: -4000169871037716318
+    second: purple_tanks_28
+  - first:
+      213: 8429372917863977733
+    second: purple_tanks_29
+  - first:
+      213: 1122882076665867207
+    second: purple_tanks_30
+  - first:
+      213: 408282069089382281
+    second: purple_tanks_31
+  - first:
+      213: 2786349693034716986
+    second: purple_tanks_32
+  - first:
+      213: -9024890552002589896
+    second: purple_tanks_33
+  - first:
+      213: -3539894655672617731
+    second: purple_tanks_34
+  - first:
+      213: -6581609735998218359
+    second: purple_tanks_35
+  - first:
+      213: -3159329919649152004
+    second: purple_tanks_36
+  - first:
+      213: 4868441558179739521
+    second: purple_tanks_37
+  - first:
+      213: 4151780500553509641
+    second: purple_tanks_38
+  - first:
+      213: -1543563409529142179
+    second: purple_tanks_39
+  - first:
+      213: -3213540453967433185
+    second: purple_tanks_40
+  - first:
+      213: -5176612348513802185
+    second: purple_tanks_41
+  - first:
+      213: 5064647279352450411
+    second: purple_tanks_42
+  - first:
+      213: 7723119983657428699
+    second: purple_tanks_43
+  - first:
+      213: -6033535804394527302
+    second: purple_tanks_44
+  - first:
+      213: -6627171268327185362
+    second: purple_tanks_45
+  - first:
+      213: 2565017879218876821
+    second: purple_tanks_46
+  - first:
+      213: -8321703870954791911
+    second: purple_tanks_47
+  - first:
+      213: 1836543685307572423
+    second: purple_tanks_48
+  - first:
+      213: 5509741432772433153
+    second: purple_tanks_49
+  - first:
+      213: 7230515636576740488
+    second: purple_tanks_50
+  - first:
+      213: -1790713549371762710
+    second: purple_tanks_51
+  - first:
+      213: -5339720823516619617
+    second: purple_tanks_52
+  - first:
+      213: 1204033205060121169
+    second: purple_tanks_53
+  - first:
+      213: 749306081498646578
+    second: purple_tanks_54
+  - first:
+      213: 4049946656699839166
+    second: purple_tanks_55
+  - first:
+      213: -2103651231816415287
+    second: purple_tanks_56
+  - first:
+      213: 3148189235782709974
+    second: purple_tanks_57
+  - first:
+      213: -4424419044408402964
+    second: purple_tanks_58
+  - first:
+      213: -4766963680849639323
+    second: purple_tanks_59
+  - first:
+      213: -8518737245097112758
+    second: purple_tanks_60
+  - first:
+      213: -6861988727112879605
+    second: purple_tanks_61
+  - first:
+      213: -3384574534399669232
+    second: purple_tanks_62
+  - first:
+      213: -5221020854646945694
+    second: purple_tanks_63
+  - first:
+      213: 2794673374353549514
+    second: purple_tanks_64
+  - first:
+      213: 6840930502301119751
+    second: purple_tanks_65
+  - first:
+      213: -8507562942504462248
+    second: purple_tanks_66
+  - first:
+      213: -3027011624815624178
+    second: purple_tanks_67
+  - first:
+      213: 8679273468399239381
+    second: purple_tanks_68
+  - first:
+      213: 564254787977174193
+    second: purple_tanks_69
+  - first:
+      213: -1189599790691579797
+    second: purple_tanks_70
+  - first:
+      213: -1726119158928370169
+    second: purple_tanks_71
+  - first:
+      213: 8493539334911109737
+    second: purple_tanks_72
+  - first:
+      213: 7666940995242110481
+    second: purple_tanks_73
+  - first:
+      213: 2547304473212047897
+    second: purple_tanks_74
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: purple_tanks_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 904
+        width: 61
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34226c58fcd8f490800000000000000
+      internalID: -7712171402612038594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 895
+        width: 92
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce4df9104427b7d0800000000000000
+      internalID: -2902811577084457268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_2
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 886
+        width: 109
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ba24a9a71a59c40800000000000000
+      internalID: 5518494466358553385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_3
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 860
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d1c91cc00de9b70800000000000000
+      internalID: 8907785866191838580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_4
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 856
+        width: 118
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0e27100db392a40800000000000000
+      internalID: 5343868197415346375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_5
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 865
+        width: 109
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c4cf62509ae06a0800000000000000
+      internalID: -6481056974145565631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_6
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 882
+        width: 109
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e2943769a256e90800000000000000
+      internalID: -7033168417401524632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_7
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 880
+        width: 92
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b43c24a88ed00b0800000000000000
+      internalID: -5760692667813770431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_8
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 870
+        width: 101
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee875cac35210f70800000000000000
+      internalID: 9151636860313243373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_9
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 871
+        width: 59
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6c0c51f3fce64f0800000000000000
+      internalID: -833501011162118491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_10
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 790
+        width: 92
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2560b5a089b3f880800000000000000
+      internalID: -8578308903023909585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_11
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 789
+        width: 93
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b436ad00031a0300800000000000000
+      internalID: 219008422830814388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_12
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 763
+        width: 89
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e05af8600c8c1e0800000000000000
+      internalID: -2177279285421339035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_13
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 779
+        width: 120
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aecc949d578916f40800000000000000
+      internalID: 5720020633661328618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_14
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 771
+        width: 101
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9fbfd2902f9c510800000000000000
+      internalID: 1570052066355444212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_15
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 773
+        width: 101
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826070d7f8f216380800000000000000
+      internalID: -8979843888675617240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_16
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 770
+        width: 107
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6f919919054fbc0800000000000000
+      internalID: -3750284003423684899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_17
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 772
+        width: 107
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29db622ac70232ea0800000000000000
+      internalID: -5898835367256736366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_18
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 773
+        width: 101
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb6a4e3bcbb20890800000000000000
+      internalID: -7493220348393264179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_19
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 775
+        width: 83
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a5f1c9c0b8215970800000000000000
+      internalID: 8741813091467130274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_20
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 774
+        width: 75
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b9577d37c959e60800000000000000
+      internalID: 7968447137051941723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_21
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 644
+        width: 97
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8692f4c53732970800000000000000
+      internalID: 8728947343076452580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_22
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 669
+        width: 86
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d8c1010ac10eac0800000000000000
+      internalID: -3828028209474269807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_23
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 651
+        width: 91
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53bc0855d1a143640800000000000000
+      internalID: 5058696994734787381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_24
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 659
+        width: 65
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e90ed6c755c0230800000000000000
+      internalID: 3606351394524667466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_25
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 671
+        width: 103
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7221fd556b9689aa0800000000000000
+      internalID: -6154052658956135897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_26
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 631
+        width: 115
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a77cf79e64ee9f0800000000000000
+      internalID: -437334145123255800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_27
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 663
+        width: 109
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38a59d0411bc6fc0800000000000000
+      internalID: -3500228110688344004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_28
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 671
+        width: 101
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8a39332ba8c78c0800000000000000
+      internalID: -4000169871037716318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_29
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 672
+        width: 76
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503949012062bf470800000000000000
+      internalID: 8429372917863977733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_30
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 675
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb6258ac47459f00800000000000000
+      internalID: 1122882076665867207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_31
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 664
+        width: 92
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98feb30f0628aa500800000000000000
+      internalID: 408282069089382281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_32
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 541
+        width: 101
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f5a59784a1ba620800000000000000
+      internalID: 2786349693034716986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_33
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 524
+        width: 92
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b4b1fdbd521c280800000000000000
+      internalID: -9024890552002589896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_34
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 545
+        width: 86
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4745ad094cfdec0800000000000000
+      internalID: -3539894655672617731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_35
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 542
+        width: 92
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fd293e0dc69a4a0800000000000000
+      internalID: -6581609735998218359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_36
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 544
+        width: 88
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf38c0b4d2ec724d0800000000000000
+      internalID: -3159329919649152004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_37
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 525
+        width: 97
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1877d059dcd209340800000000000000
+      internalID: 4868441558179739521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_38
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 522
+        width: 112
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ba2e04e561e9930800000000000000
+      internalID: 4151780500553509641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_39
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 540
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5489b6d149249ae0800000000000000
+      internalID: -1543563409529142179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_40
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 548
+        width: 102
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f127ce1bbf53763d0800000000000000
+      internalID: -3213540453967433185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_41
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 551
+        width: 85
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7382fe2fe7af828b0800000000000000
+      internalID: -5176612348513802185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_42
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 534
+        width: 65
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d837eeddd394640800000000000000
+      internalID: 5064647279352450411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_43
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 438
+        width: 92
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd62f9fc4b80e2b60800000000000000
+      internalID: 7723119983657428699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_44
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 436
+        width: 75
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5a6772723944ca0800000000000000
+      internalID: -6033535804394527302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_45
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 428
+        width: 83
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24eeadf7de8704a0800000000000000
+      internalID: -6627171268327185362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_46
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 438
+        width: 74
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591fd5dcb26c89320800000000000000
+      internalID: 2565017879218876821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_47
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 436
+        width: 90
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c1fbd6b6e538c80800000000000000
+      internalID: -8321703870954791911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_48
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 435
+        width: 90
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0ae3950c6bc7910800000000000000
+      internalID: 1836543685307572423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_49
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 190
+        width: 80
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10517a824a8867c40800000000000000
+      internalID: 5509741432772433153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_50
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 13
+        width: 194
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884601d99a3f75460800000000000000
+      internalID: 7230515636576740488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_51
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 185
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae79733b38b1627e0800000000000000
+      internalID: -1790713549371762710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_52
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 26
+        width: 179
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c198ab33085e5b0800000000000000
+      internalID: -5339720823516619617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_53
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 8
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152326d12d595b010800000000000000
+      internalID: 1204033205060121169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_54
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 25
+        width: 182
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23844cf39e1166a00800000000000000
+      internalID: 749306081498646578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_55
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 110
+        width: 91
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2ffd7d60d443830800000000000000
+      internalID: 4049946656699839166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_56
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 110
+        width: 89
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7054ca9545ec2e0800000000000000
+      internalID: -2103651231816415287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_57
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 86
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2798c1e6d90bb20800000000000000
+      internalID: 3148189235782709974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_58
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 125
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb5098125e4992c0800000000000000
+      internalID: -4424419044408402964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_59
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 134
+        width: 46
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568c4c9e9c758ddb0800000000000000
+      internalID: -4766963680849639323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_60
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 11
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bc81b1c9d57c980800000000000000
+      internalID: -8518737245097112758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_61
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 15
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02b3bbeb9155c0a0800000000000000
+      internalID: -6861988727112879605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_62
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 88
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c4649a4639701d0800000000000000
+      internalID: -3384574534399669232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_63
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 89
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268ccd1e1353b87b0800000000000000
+      internalID: -5221020854646945694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_64
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 90
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8e59d80aca8c620800000000000000
+      internalID: 2794673374353549514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_65
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 90
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705faca0c0edfee50800000000000000
+      internalID: 6840930502301119751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_66
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 90
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8589ebb24901fe980800000000000000
+      internalID: -8507562942504462248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_67
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0003eb07f4edf5d0800000000000000
+      internalID: -3027011624815624178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_68
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 30
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0c8681c39f27870800000000000000
+      internalID: 8679273468399239381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_69
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 29
+        width: 41
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc51387db2a4d700800000000000000
+      internalID: 564254787977174193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_70
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 27
+        width: 59
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6803fa0b41bd7fe0800000000000000
+      internalID: -1189599790691579797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_71
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 28
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706141435c79b08e0800000000000000
+      internalID: -1726119158928370169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_72
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 28
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a2f2f360d1fd570800000000000000
+      internalID: 8493539334911109737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_73
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 28
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e2947c632766a60800000000000000
+      internalID: 7666940995242110481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_tanks_74
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 27
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91251941ce7d95320800000000000000
+      internalID: 2547304473212047897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

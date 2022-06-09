@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 337e16f044e84fc198b698b0d768d652, type: 3}
-  m_Name: DynamicTank
+  m_Name: HeavyTank
   m_EditorClassIdentifier: 
-  name: Dynamic
-  type: 1
+  name: Heavy Tank
+  type: 2

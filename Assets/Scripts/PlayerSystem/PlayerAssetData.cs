@@ -1,4 +1,5 @@
 using TankSystem;
+using TankSystem.Base;
 using UnityEngine;
 
 namespace PlayerSystem
@@ -8,6 +9,6 @@ namespace PlayerSystem
     {
         public string nickname = "";
         public GameObject player = null;
-        public Tank item = null;
+        public TankBase item = null;
     }
 }
