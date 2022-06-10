@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 
 namespace DetectorSystem.Base
@@ -10,12 +9,6 @@ namespace DetectorSystem.Base
     {
         public Action<IDetectable> OnDetectSomething;
 
-        private void OnTriggerEnter2D(Collider2D col)
-        {
-            if (col.TryGetComponent(out IDetectable target))
-            {
-                OnDetectSomething?.Invoke(target);
-            }
-        }
+        protected abstract void OnTriggerEnter2D(Collider2D col);
     }
 }

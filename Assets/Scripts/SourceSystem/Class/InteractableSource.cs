@@ -1,4 +1,4 @@
-using DropSystem.Base;
+using PlacerSystem.Base;
 using SourceSystem.Base;
 using StorageSystem.Base;
 using StorageSystem.Utilities;
@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace SourceSystem.Class
 {
-    public class InteractableSource : SourceBase, IStorable, IDroppable
+    public class InteractableSource : SourceBase, IStorable, IPlaceable
     {
         public bool CanStorable { get; protected set; } = true;
         public StorageType Type { get; protected set; } = StorageType.Source;

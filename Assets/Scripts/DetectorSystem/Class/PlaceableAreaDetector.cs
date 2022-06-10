@@ -1,15 +1,16 @@
+using AreaSystem.Class.PlaceArea;
 using DetectorSystem.Base;
 using UnityEngine;
 
 namespace DetectorSystem.Class
 {
-    public class Detector : DetectorBase
+    public class PlaceableAreaDetector : DetectorBase
     {
         protected override void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.TryGetComponent(out IDetectable target))
+            if (col.TryGetComponent(out IPlaceableArea area))
             {
-                OnDetectSomething?.Invoke(target);
+                OnDetectSomething?.Invoke(area);
             }
         }
     }

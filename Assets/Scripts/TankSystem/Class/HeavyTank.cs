@@ -1,7 +1,7 @@
 using DetectorSystem.Base;
-using DropSystem.Base;
 using LocomotionSystem.Base;
 using LocomotionSystem.Class;
+using PlacerSystem.Base;
 using StorageSystem.Base;
 using TankSystem.Base;
 using TankSystem.Data;
@@ -11,35 +11,28 @@ namespace TankSystem.Class
     public class HeavyTank : TankBase
     {
         private LocomotionBase _locomotion = null;
-        private DetectorBase _detector = null;
         private StorageBase _storage = null;
-        private DropperBase _dropper = null;
+        private PlacerBase _placer = null;
         
         public override void Initialize(TankData data)
         {
             base.Initialize(data);
             _locomotion = GetComponent<MobileLocomotion>();
-            _detector = GetComponentInChildren<DetectorBase>();
             _storage = GetComponentInChildren<StorageBase>();
-            _dropper = GetComponentInChildren<DropperBase>();
-            _detector.OnDetectSomething += OnDetect;
-            _dropper.OnDetectDropArea += OnDrop;
+            _placer = GetComponentInChildren<PlacerBase>();
+            _placer.Initialize();
+            _storage.Initialize();
+            _placer.PlaceableAreaDetector.OnDetectSomething += OnPlace;
         }
 
         private void OnDisable()
         {
-            _detector.OnDetectSomething -= OnDetect;
-            _dropper.OnDetectDropArea -= OnDrop;
+            _placer.PlaceableAreaDetector.OnDetectSomething -= OnPlace;
         }
 
-        private void OnDetect(IDetectable target)
+        private void OnPlace(IDetectable placeableArea)
         {
-            _storage.StoreElement(target as IStorable);
-        }
-
-        private void OnDrop()
-        {
-            _dropper.DropElements(_storage.Storages);
+            _placer.PlaceElements(_storage.Storages);
         }
     }
 }
