@@ -1,4 +1,3 @@
-using DetectorSystem.Base;
 using LocomotionSystem.Base;
 using LocomotionSystem.Class;
 using PlacerSystem.Base;
@@ -22,17 +21,17 @@ namespace TankSystem.Class
             _placer = GetComponentInChildren<PlacerBase>();
             _placer.Initialize();
             _storage.Initialize();
-            _placer.PlaceableAreaDetector.OnDetectSomething += OnPlace;
+            _storage.OnStore += OnStore;
         }
 
         private void OnDisable()
         {
-            _placer.PlaceableAreaDetector.OnDetectSomething -= OnPlace;
+            _storage.OnStore -= OnStore;
         }
 
-        private void OnPlace(IDetectable placeableArea)
+        private void OnStore(IStorable storableElem)
         {
-            _placer.PlaceElements(_storage.Storages);
+            _placer.OnReceiveElement(storableElem.GetTarget());
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using AreaSystem.Class.PlaceArea;
 using DetectorSystem.Base;
 using DetectorSystem.Class;
 using UnityEngine;
@@ -7,28 +8,42 @@ namespace PlacerSystem.Base
 {
     public abstract class PlacerBase : MonoBehaviour
     {
-        public DetectorBase PlaceableAreaDetector { get; private set; }
+        public DetectorBase<IPlaceableArea> PlaceableAreaDetector { get; private set; }
+
+        private readonly List<IPlaceable> _placeableElements = new List<IPlaceable>();
+        public void OnReceiveElement(GameObject elem)
+        {
+            var target = IsPlaceable(elem);
+            
+            if (target != null)
+                _placeableElements.Add(target);
+        }
+
+        #region Initialization
         public void Initialize()
         {
             PlaceableAreaDetector = GetComponentInChildren<PlaceableAreaDetector>();
+            PlaceableAreaDetector.OnDetectSomething += PlaceElements;
         }
-        public virtual void PlaceElements(List<GameObject> elements)
+        private void OnDisable()
         {
-            for (var i = elements.Count - 1; i >= 0; i--)
+            PlaceableAreaDetector.OnDetectSomething -= PlaceElements;
+        }
+        #endregion
+        
+        public virtual void PlaceElements(IPlaceableArea area)
+        {
+            area.OnReceivePlaceableElements(_placeableElements);
+            
+            for (var i = _placeableElements.Count - 1; i >= 0; i--)
             {
-                var placeableElem = elements[i].GetComponent<IPlaceable>();
-                
-                if (CanPlaceElement(placeableElem))
-                {
-                    placeableElem.UnPossesBy();
-
-                    elements.RemoveAt(i);
-                }
+                _placeableElements[i].UnPossesBy();
+                _placeableElements.RemoveAt(i);
             }
         }
-        protected virtual bool CanPlaceElement(IPlaceable elem)
+        protected virtual IPlaceable IsPlaceable(GameObject elem)
         {
-            return elem != null;
+            return elem.GetComponent<IPlaceable>();
         }
     }
 }

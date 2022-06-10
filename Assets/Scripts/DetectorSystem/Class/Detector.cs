@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DetectorSystem.Class
 {
-    public class Detector : DetectorBase
+    public class Detector : DetectorBase<IDetectable>
     {
         protected override void OnTriggerEnter2D(Collider2D col)
         {

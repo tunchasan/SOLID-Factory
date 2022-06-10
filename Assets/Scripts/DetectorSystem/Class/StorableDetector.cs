@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DetectorSystem.Class
 {
-    public class StorableDetector : DetectorBase
+    public class StorableDetector : DetectorBase<IStorable>
     {
         protected override void OnTriggerEnter2D(Collider2D col)
         {
