@@ -10,13 +10,15 @@ namespace DropSystem.Base
         
         public void DropElements(List<GameObject> elements)
         {
-            foreach (var elem in elements)
+            for (var i = elements.Count - 1; i >= 0; i--)
             {
-                var droppableElem = elem.GetComponent<IDroppable>();
+                var droppableElem = elements[i].GetComponent<IDroppable>();
                 
                 if (CanDropElement(droppableElem))
                 {
                     droppableElem.UnPossesBy();
+
+                    elements.RemoveAt(i);
                 }
             }
         }
