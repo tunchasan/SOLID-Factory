@@ -14,7 +14,7 @@ namespace AreaSystem.Class.PlaceArea
 
         public void OnReceivePlaceableElements(List<IPlaceable> elements)
         {
-            // TODO
+            Debug.Log(elements.Count);
         }
     }
 }
