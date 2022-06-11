@@ -15,6 +15,19 @@ namespace PlacerSystem.Base
         private readonly List<IPlaceable> _placeableElements = new List<IPlaceable>();
 
         public Action<List<IPlaceable>> OnPlace;
+        
+        #region Initialization
+        public void Initialize()
+        {
+            PlaceableAreaDetector = GetComponentInChildren<PlaceableAreaDetector>();
+            PlaceableAreaDetector.OnDetectSomething += PlaceElements;
+        }
+        private void OnDisable()
+        {
+            PlaceableAreaDetector.OnDetectSomething -= PlaceElements;
+        }
+        #endregion
+
         public void OnReceiveElement(GameObject elem)
         {
             if (elem.TryGetComponent(out IPlaceable target))
@@ -34,17 +47,5 @@ namespace PlacerSystem.Base
                 _placeableElements.RemoveAt(i);
             }
         }
-        
-        #region Initialization
-        public void Initialize()
-        {
-            PlaceableAreaDetector = GetComponentInChildren<PlaceableAreaDetector>();
-            PlaceableAreaDetector.OnDetectSomething += PlaceElements;
-        }
-        private void OnDisable()
-        {
-            PlaceableAreaDetector.OnDetectSomething -= PlaceElements;
-        }
-        #endregion
     }
 }

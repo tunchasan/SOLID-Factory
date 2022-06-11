@@ -14,7 +14,8 @@ namespace TankSystem.Class
         private LocomotionBase _locomotion = null;
         private StorageBase _storage = null;
         private PlacerBase _placer = null;
-        
+
+        #region Initializations
         public override void Initialize(TankData data)
         {
             base.Initialize(data);
@@ -26,21 +27,20 @@ namespace TankSystem.Class
             _storage.OnStore += OnStore;
             _placer.OnPlace += OnPlace;
         }
-
         private void OnDisable()
         {
             _storage.OnStore -= OnStore;
             _placer.OnPlace -= OnPlace;
         }
+        #endregion
 
         private void OnStore(IStorable storableElem)
         {
             _placer.OnReceiveElement(storableElem.GetTarget());
         }
-
-        private void OnPlace(List<IPlaceable> placeables)
+        private void OnPlace(List<IPlaceable> placeElements)
         {
-            var list = placeables.Select(elem => elem.GetTarget()).ToList();
+            var list = placeElements.Select(elem => elem.GetTarget()).ToList();
             _storage.RemoveElements(list);
         }
     }

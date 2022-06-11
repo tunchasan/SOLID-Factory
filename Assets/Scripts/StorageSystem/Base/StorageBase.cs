@@ -13,6 +13,22 @@ namespace StorageSystem.Base
         protected abstract StorageType Type { get; set; }
         public DetectorBase<IStorable> StorableDetector { get; private set; }
         public List<IStorable> Storages { get; private set; } = new List<IStorable>();
+
+        #region Initializations
+
+        public virtual void Initialize()
+        {
+            StorableDetector = GetComponentInChildren<StorableDetector>();
+            StorableDetector.OnDetectSomething += StoreElement;
+        }
+
+        private void OnDisable()
+        {
+            StorableDetector.OnDetectSomething -= StoreElement;
+        }
+
+        #endregion
+
         public virtual void StoreElement(IStorable elem)
         {
             if (CanStoreElement(elem))
@@ -24,7 +40,7 @@ namespace StorageSystem.Base
         }
         protected virtual bool CanStoreElement(IStorable elem)
         {
-            return elem != null 
+            return elem != null
                    &&
                    !Storages.Contains(elem)
                    &&
@@ -33,29 +49,14 @@ namespace StorageSystem.Base
         public void RemoveElements(List<GameObject> targetElements)
         {
             Debug.Log($"{Storages.Count} : Storage Elements Before Placing");
-            
+
             foreach (var elem in targetElements)
             {
                 var storable = elem.GetComponent<IStorable>();
                 Storages.Remove(storable);
             }
-            
+
             Debug.Log($"{Storages.Count} : Storage Elements After Placing");
         }
-        
-        #region Initializations
-
-        public virtual void Initialize()
-        {
-            StorableDetector = GetComponentInChildren<StorableDetector>();
-            StorableDetector.OnDetectSomething += StoreElement;
-        }
-        
-        private void OnDisable()
-        {
-            StorableDetector.OnDetectSomething -= StoreElement;
-        }
-
-        #endregion
     }
 }
