@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using LocomotionSystem.Base;
 using LocomotionSystem.Class;
 using PlacerSystem.Base;
@@ -22,16 +24,24 @@ namespace TankSystem.Class
             _placer.Initialize();
             _storage.Initialize();
             _storage.OnStore += OnStore;
+            _placer.OnPlace += OnPlace;
         }
 
         private void OnDisable()
         {
             _storage.OnStore -= OnStore;
+            _placer.OnPlace -= OnPlace;
         }
 
         private void OnStore(IStorable storableElem)
         {
             _placer.OnReceiveElement(storableElem.GetTarget());
+        }
+
+        private void OnPlace(List<IPlaceable> placeables)
+        {
+            var list = placeables.Select(elem => elem.GetTarget()).ToList();
+            _storage.RemoveElements(list);
         }
     }
 }

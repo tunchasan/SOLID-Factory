@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using AreaSystem.Class.PlaceArea;
 using DetectorSystem.Base;
 using DetectorSystem.Class;
@@ -11,16 +12,28 @@ namespace PlacerSystem.Base
     {
         public DetectorBase<IPlaceableArea> PlaceableAreaDetector { get; private set; }
 
-        private readonly List<GameObject> _placeableElements = new List<GameObject>();
+        private readonly List<IPlaceable> _placeableElements = new List<IPlaceable>();
+
+        public Action<List<IPlaceable>> OnPlace;
         public void OnReceiveElement(GameObject elem)
         {
             if (elem.TryGetComponent(out IPlaceable target))
             {
-                _placeableElements.Add(elem);
+                _placeableElements.Add(target);
             }
         }
-
-        public Action<List<IPlaceable>> OnPlace;
+        public virtual void PlaceElements(IPlaceableArea area)
+        {
+            OnPlace?.Invoke(_placeableElements);
+            
+            area.OnReceivePlaceableElements(_placeableElements);
+            
+            for (var i = _placeableElements.Count - 1; i >= 0; i--)
+            {
+                _placeableElements[i].UnPossesBy();
+                _placeableElements.RemoveAt(i);
+            }
+        }
         
         #region Initialization
         public void Initialize()
@@ -33,16 +46,5 @@ namespace PlacerSystem.Base
             PlaceableAreaDetector.OnDetectSomething -= PlaceElements;
         }
         #endregion
-        
-        public virtual void PlaceElements(IPlaceableArea area)
-        {
-            area.OnReceivePlaceableElements(_placeableElements);
-            
-            for (var i = _placeableElements.Count - 1; i >= 0; i--)
-            {
-                _placeableElements[i].UnPossesBy();
-                _placeableElements.RemoveAt(i);
-            }
-        }
     }
 }
