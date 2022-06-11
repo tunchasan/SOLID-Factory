@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using BlockSystem;
 using DetectorSystem.Base;
 using DetectorSystem.Class;
 using StorageSystem.Utilities;
@@ -7,9 +8,9 @@ using UnityEngine;
 
 namespace StorageSystem.Base
 {
-    public abstract class StorageBase : MonoBehaviour
+    public abstract class StorageBase : BlockableMonobehaviour
     {
-        public Action<IStorable> OnStore;
+        public Action<IStorable> OnStore { get; set; }
         protected abstract StorageType Type { get; set; }
         public DetectorBase<IStorable> StorableDetector { get; private set; }
         public List<IStorable> Storages { get; private set; } = new List<IStorable>();
@@ -19,12 +20,12 @@ namespace StorageSystem.Base
         public virtual void Initialize()
         {
             StorableDetector = GetComponentInChildren<StorableDetector>();
-            StorableDetector.OnDetectSomething += StoreElement;
+            StorableDetector.OnDetectionSomething += StoreElement;
         }
 
         private void OnDisable()
         {
-            StorableDetector.OnDetectSomething -= StoreElement;
+            StorableDetector.OnDetectionSomething -= StoreElement;
         }
 
         #endregion
@@ -41,10 +42,8 @@ namespace StorageSystem.Base
         protected virtual bool CanStoreElement(IStorable elem)
         {
             return elem != null
-                   &&
-                   !Storages.Contains(elem)
-                   &&
-                   elem.Type == Type;
+                   && !Storages.Contains(elem)
+                   && elem.Type == Type;
         }
         public void RemoveElements(List<GameObject> targetElements)
         {

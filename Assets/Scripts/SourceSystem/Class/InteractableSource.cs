@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace SourceSystem.Class
 {
-    public class InteractableSource : SourceBase, IStorable, IPlaceable
+    public abstract class InteractableSource : SourceBase, IStorable, IPlaceable
     {
         public bool CanStorable { get; protected set; } = true;
         public StorageType Type { get; protected set; } = StorageType.Source;

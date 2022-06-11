@@ -1,51 +1,49 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using AreaSystem.Class.PlaceArea;
+using BlockSystem;
 using DetectorSystem.Base;
 using DetectorSystem.Class;
 using UnityEngine;
 
 namespace PlacerSystem.Base
 {
-    public abstract class PlacerBase : MonoBehaviour
+    public abstract class PlacerBase : BlockableMonobehaviour
     {
-        public DetectorBase<IPlaceableArea> PlaceableAreaDetector { get; private set; }
-
-        private readonly List<IPlaceable> _placeableElements = new List<IPlaceable>();
-
-        public Action<List<IPlaceable>> OnPlace;
+        protected DetectorBase<IPlaceableArea> PlaceableAreaDetector { get; set; }
         
         #region Initialization
-        public void Initialize()
+        
+        public virtual void Initialize()
         {
             PlaceableAreaDetector = GetComponentInChildren<PlaceableAreaDetector>();
-            PlaceableAreaDetector.OnDetectSomething += PlaceElements;
         }
-        private void OnDisable()
-        {
-            PlaceableAreaDetector.OnDetectSomething -= PlaceElements;
-        }
+        
         #endregion
 
-        public void OnReceiveElement(GameObject elem)
+        protected virtual bool CanPlace()
         {
-            if (elem.TryGetComponent(out IPlaceable target))
-            {
-                _placeableElements.Add(target);
-            }
+            return PlaceableAreaDetector.DetectionState != null;
         }
-        public virtual void PlaceElements(IPlaceableArea area)
+
+        public virtual void PlaceElements(List<IPlaceable> target, Action<bool> onComplete = null)
         {
-            OnPlace?.Invoke(_placeableElements);
-            
-            area.OnReceivePlaceableElements(_placeableElements);
-            
-            for (var i = _placeableElements.Count - 1; i >= 0; i--)
+            if (!CanPlace())
             {
-                _placeableElements[i].UnPossesBy();
-                _placeableElements.RemoveAt(i);
+                Debug.LogWarning(($"{name} didn't detect any IPlaceable area!"));
+                onComplete?.Invoke(false);
+                return;
             }
+            
+            for (var i = target.Count - 1; i >= 0; i--)
+            {
+                var elem = target[i];
+                PlaceableAreaDetector.DetectionState.OnReceivePlaceableElement(elem);
+                elem.UnPossesBy();
+                target.RemoveAt(i);
+            }
+            
+            onComplete?.Invoke(true);
         }
     }
 }

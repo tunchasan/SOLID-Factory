@@ -7,5 +7,6 @@ namespace AreaSystem.Class.PlaceArea
     public interface IPlaceableArea : IDetectable
     {
         void OnReceivePlaceableElements(List<IPlaceable> elements);
+        void OnReceivePlaceableElement(IPlaceable element);
     }
 }

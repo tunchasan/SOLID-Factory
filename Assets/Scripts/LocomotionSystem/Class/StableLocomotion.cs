@@ -32,7 +32,10 @@ namespace LocomotionSystem.Class
             {
                 var angle = Mathf.Atan2(Input.RotationInput.y, Input.RotationInput.x) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                OnLocomotion?.Invoke();
             }
+            else
+                OnCancelledLocomotion?.Invoke();
         }
         
         public void StopRotation()

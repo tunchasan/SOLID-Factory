@@ -4,6 +4,6 @@ namespace AreaSystem.Base
 {
     public abstract class AreaBase : MonoBehaviour
     {
-        // TODO
+        protected abstract void OnTriggerEnter2D(Collider2D col);
     }
 }

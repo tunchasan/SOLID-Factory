@@ -1,47 +1,44 @@
-using System.Collections.Generic;
-using System.Linq;
 using LocomotionSystem.Base;
 using LocomotionSystem.Class;
-using PlacerSystem.Base;
-using StorageSystem.Base;
 using TankSystem.Base;
 using TankSystem.Data;
+using TankSystem.Units.PlacerUnit.Base;
 
 namespace TankSystem.Class
 {
     public class HeavyTank : TankBase
     {
         private LocomotionBase _locomotion = null;
-        private StorageBase _storage = null;
-        private PlacerBase _placer = null;
-
+        private PlacerUnitBase _placerUnit = null;
+        
         #region Initializations
         public override void Initialize(TankData data)
         {
             base.Initialize(data);
             _locomotion = GetComponent<MobileLocomotion>();
-            _storage = GetComponentInChildren<StorageBase>();
-            _placer = GetComponentInChildren<PlacerBase>();
-            _placer.Initialize();
-            _storage.Initialize();
-            _storage.OnStore += OnStore;
-            _placer.OnPlace += OnPlace;
+            _placerUnit = GetComponentInChildren<PlacerUnitBase>();
+            _placerUnit.Initialize(true);
+
+            _locomotion.OnLocomotion += OnLocomotion;
+            _locomotion.OnCancelledLocomotion += OnCancelledLocomotion;
         }
-        private void OnDisable()
+
+        protected virtual void OnDisable()
         {
-            _storage.OnStore -= OnStore;
-            _placer.OnPlace -= OnPlace;
+            _locomotion.OnLocomotion -= OnLocomotion;
+            _locomotion.OnCancelledLocomotion -= OnCancelledLocomotion;
         }
+
         #endregion
 
-        private void OnStore(IStorable storableElem)
+        protected virtual void OnLocomotion()
         {
-            _placer.OnReceiveElement(storableElem.GetTarget());
+            _placerUnit.Block();
         }
-        private void OnPlace(List<IPlaceable> placeElements)
+
+        protected virtual void OnCancelledLocomotion()
         {
-            var list = placeElements.Select(elem => elem.GetTarget()).ToList();
-            _storage.RemoveElements(list);
+            _placerUnit.UnBlock();
         }
     }
 }

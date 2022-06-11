@@ -8,8 +8,9 @@ namespace DetectorSystem.Base
     public abstract class DetectorBase<T>: MonoBehaviour
     where T: IDetectable
     {
-        public Action<T> OnDetectSomething;
-        
+        public Action<T> OnDetectionSomething;
+        public abstract T DetectionState { protected set; get; }
         protected abstract void OnTriggerEnter2D(Collider2D col);
+        protected abstract void OnTriggerExit2D(Collider2D col);
     }
 }

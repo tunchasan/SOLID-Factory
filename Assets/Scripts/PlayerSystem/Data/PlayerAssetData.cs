@@ -1,13 +1,12 @@
-using TankSystem;
 using TankSystem.Base;
 using UnityEngine;
 
-namespace PlayerSystem
+namespace PlayerSystem.Data
 {
     [CreateAssetMenu]
     public class PlayerAssetData : ScriptableObject
     {
-        public string nickname = "";
+        public string nickname = string.Empty;
         public GameObject player = null;
         public TankBase item = null;
     }

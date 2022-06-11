@@ -1,5 +1,6 @@
 using InputControllerSystem.Settings;
 using PlayerSystem;
+using PlayerSystem.Data;
 using TankSystem.Class;
 using TankSystem.Data;
 using Zenject;
