@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace AreaSystem.Class.PlaceArea.Base
 {
-    public abstract class PlaceAreaBase : AreaBase, IPlaceableArea
+    public abstract class PlaceableAreaBase : AreaBase, IPlaceableArea
     {
         protected AreaPlacerBase AreaPlacer = null;
         public Action OnPlacedElementToArea { get; set; }
