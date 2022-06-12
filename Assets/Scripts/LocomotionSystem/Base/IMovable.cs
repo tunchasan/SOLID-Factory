@@ -2,7 +2,8 @@
 {
     public interface IMovable
     {
-        public bool CanMove { get; }
+        public bool CanMove();
+        public bool ShouldMove { get; }
         public abstract void StartMovement();
         public abstract void ProcessMovement();
         public abstract void StopMovement();

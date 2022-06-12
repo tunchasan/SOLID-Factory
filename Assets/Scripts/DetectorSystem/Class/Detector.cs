@@ -16,6 +16,15 @@ namespace DetectorSystem.Class
             }
         }
 
+        protected override void OnTriggerStay2D(Collider2D other)
+        {
+            if (other.TryGetComponent(out IDetectable detectable))
+            {
+                OnDetectionSomething?.Invoke(detectable);
+                DetectionState = detectable;
+            }
+        }
+
         protected override void OnTriggerExit2D(Collider2D col)
         {
             if (col.TryGetComponent(out IDetectable detectable))

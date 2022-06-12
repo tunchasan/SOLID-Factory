@@ -604,10 +604,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heavy Tank
       objectReference: {fileID: 0}
-    - target: {fileID: 6905221207282572599, guid: 7a0dfdfb7a6cb254cb943fd3f26fff32, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6905221207282572602, guid: 7a0dfdfb7a6cb254cb943fd3f26fff32, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -652,7 +648,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 7a0dfdfb7a6cb254cb943fd3f26fff32, type: 3}
 --- !u!1001 &7348780055168622147
 PrefabInstance:

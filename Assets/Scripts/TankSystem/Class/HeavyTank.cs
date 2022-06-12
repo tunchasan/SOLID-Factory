@@ -17,7 +17,7 @@ namespace TankSystem.Class
             base.Initialize(data);
             _locomotion = GetComponent<MobileLocomotion>();
             _placerUnit = GetComponentInChildren<PlacerUnitBase>();
-            _placerUnit.Initialize(true);
+            _placerUnit.Initialize(false);
 
             _locomotion.OnLocomotion += OnLocomotion;
             _locomotion.OnCancelledLocomotion += OnCancelledLocomotion;

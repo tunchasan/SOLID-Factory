@@ -10,16 +10,19 @@ namespace StorageSystem.Base
 {
     public abstract class StorageBase : BlockableMonobehaviour
     {
-        public Action<IStorable> OnStore { get; set; }
+        public Action<IStorable> OnStored { get; set; }
         protected abstract StorageType Type { get; set; }
         public DetectorBase<IStorable> StorableDetector { get; private set; }
         public List<IStorable> Storages { get; private set; } = new List<IStorable>();
 
         #region Initializations
 
-        public virtual void Initialize()
+        public override void Initialize(bool hasBlocked)
         {
             StorableDetector = GetComponentInChildren<StorableDetector>();
+            
+            base.Initialize(hasBlocked);
+            
             StorableDetector.OnDetectionSomething += StoreElement;
         }
 
@@ -36,23 +39,58 @@ namespace StorageSystem.Base
             {
                 Storages.Add(elem);
                 elem.PossesBy(transform);
-                OnStore?.Invoke(elem);
+                OnStored?.Invoke(elem);
             }
         }
         protected virtual bool CanStoreElement(IStorable elem)
         {
+            if (HasBlocked)
+            {
+                Debug.LogWarning(($"Storage process has blocked in {name}"));
+
+                return false;
+            }
+            
             return elem != null
                    && !Storages.Contains(elem)
                    && elem.Type == Type;
         }
-        public void RemoveElements(List<GameObject> targetElements)
+        protected virtual bool CanRemoveElement(IStorable elem)
+        {
+            if (HasBlocked)
+            {
+                Debug.LogWarning(($"Storage process has blocked in {name}"));
+
+                return false;
+            }
+            
+            if (elem == null)
+            {
+                Debug.Log($"{elem} : Null element can not be removed in {name}");
+                
+                return false;
+            }
+
+            return true;
+        }
+        public void RemoveElement(IStorable targetElem)
+        {
+            if (CanRemoveElement(targetElem))
+            {
+                Debug.Log($"{Storages.Count} : Storage Elements Before Placing in {name}");
+
+                Storages.Remove(targetElem);
+
+                Debug.Log($"{Storages.Count} : Storage Elements After Placing in {name}");
+            }
+        }
+        public void RemoveElements(List<IStorable> targetElements)
         {
             Debug.Log($"{Storages.Count} : Storage Elements Before Placing");
 
             foreach (var elem in targetElements)
             {
-                var storable = elem.GetComponent<IStorable>();
-                Storages.Remove(storable);
+                RemoveElement(elem);
             }
 
             Debug.Log($"{Storages.Count} : Storage Elements After Placing");

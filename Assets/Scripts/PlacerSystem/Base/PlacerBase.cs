@@ -4,33 +4,39 @@ using AreaSystem.Class.PlaceArea;
 using BlockSystem;
 using DetectorSystem.Base;
 using DetectorSystem.Class;
-using UnityEngine;
 
 namespace PlacerSystem.Base
 {
     public abstract class PlacerBase : BlockableMonobehaviour
     {
-        protected DetectorBase<IPlaceableArea> PlaceableAreaDetector { get; set; }
+        public Action<IPlaceable> OnPlaced { get; set; }
+        public Action OnPlaceRequest { get; set; }
+        protected DetectorBase<IPlaceableArea> placeableAreaDetector { get; set; }
         
         #region Initialization
         
-        public virtual void Initialize()
+        public override void Initialize(bool hasBlocked)
         {
-            PlaceableAreaDetector = GetComponentInChildren<PlaceableAreaDetector>();
+            placeableAreaDetector = GetComponentInChildren<PlaceableAreaDetector>();
+            placeableAreaDetector.OnDetectionSomething += CreatePlaceRequest;
+            base.Initialize(hasBlocked);
+        }
+        private void OnDisable()
+        {
+            placeableAreaDetector.OnDetectionSomething -= CreatePlaceRequest;
         }
         
         #endregion
 
-        protected virtual bool CanPlace()
+        protected abstract bool CanPlace();
+        private void CreatePlaceRequest(IPlaceableArea placeableArea)
         {
-            return PlaceableAreaDetector.DetectionState != null;
+            OnPlaceRequest?.Invoke();
         }
-
         public virtual void PlaceElements(List<IPlaceable> target, Action<bool> onComplete = null)
         {
             if (!CanPlace())
             {
-                Debug.LogWarning(($"{name} didn't detect any IPlaceable area!"));
                 onComplete?.Invoke(false);
                 return;
             }
@@ -38,9 +44,10 @@ namespace PlacerSystem.Base
             for (var i = target.Count - 1; i >= 0; i--)
             {
                 var elem = target[i];
-                PlaceableAreaDetector.DetectionState.OnReceivePlaceableElement(elem);
+                placeableAreaDetector.DetectionState.OnReceivePlaceableElement(elem);
                 elem.UnPossesBy();
                 target.RemoveAt(i);
+                OnPlaced?.Invoke(elem);
             }
             
             onComplete?.Invoke(true);

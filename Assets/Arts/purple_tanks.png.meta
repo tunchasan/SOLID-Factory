@@ -249,6 +249,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1936,6 +1937,82 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      purple_tanks_61: -6861988727112879605
+      purple_tanks_35: -6581609735998218359
+      purple_tanks_34: -3539894655672617731
+      purple_tanks_50: 7230515636576740488
+      purple_tanks_8: 9151636860313243373
+      purple_tanks_15: -8979843888675617240
+      purple_tanks_41: -5176612348513802185
+      purple_tanks_44: -6033535804394527302
+      purple_tanks_56: -2103651231816415287
+      purple_tanks_11: 219008422830814388
+      purple_tanks_3: 8907785866191838580
+      purple_tanks_66: -8507562942504462248
+      purple_tanks_49: 5509741432772433153
+      purple_tanks_7: -5760692667813770431
+      purple_tanks_31: 408282069089382281
+      purple_tanks_24: 3606351394524667466
+      purple_tanks_64: 2794673374353549514
+      purple_tanks_73: 7666940995242110481
+      purple_tanks_14: 1570052066355444212
+      purple_tanks_12: -2177279285421339035
+      purple_tanks_39: -1543563409529142179
+      purple_tanks_40: -3213540453967433185
+      purple_tanks_1: -2902811577084457268
+      purple_tanks_13: 5720020633661328618
+      purple_tanks_22: -3828028209474269807
+      purple_tanks_32: 2786349693034716986
+      purple_tanks_63: -5221020854646945694
+      purple_tanks_53: 1204033205060121169
+      purple_tanks_18: -7493220348393264179
+      purple_tanks_37: 4868441558179739521
+      purple_tanks_36: -3159329919649152004
+      purple_tanks_21: 8728947343076452580
+      purple_tanks_28: -4000169871037716318
+      purple_tanks_25: -6154052658956135897
+      purple_tanks_42: 5064647279352450411
+      purple_tanks_59: -4766963680849639323
+      purple_tanks_38: 4151780500553509641
+      purple_tanks_69: 564254787977174193
+      purple_tanks_67: -3027011624815624178
+      purple_tanks_47: -8321703870954791911
+      purple_tanks_72: 8493539334911109737
+      purple_tanks_71: -1726119158928370169
+      purple_tanks_0: -7712171402612038594
+      purple_tanks_9: -833501011162118491
+      purple_tanks_58: -4424419044408402964
+      purple_tanks_51: -1790713549371762710
+      purple_tanks_6: -7033168417401524632
+      purple_tanks_43: 7723119983657428699
+      purple_tanks_54: 749306081498646578
+      purple_tanks_62: -3384574534399669232
+      purple_tanks_30: 1122882076665867207
+      purple_tanks_55: 4049946656699839166
+      purple_tanks_48: 1836543685307572423
+      purple_tanks_10: -8578308903023909585
+      purple_tanks_74: 2547304473212047897
+      purple_tanks_60: -8518737245097112758
+      purple_tanks_70: -1189599790691579797
+      purple_tanks_4: 5343868197415346375
+      purple_tanks_5: -6481056974145565631
+      purple_tanks_16: -3750284003423684899
+      purple_tanks_2: 5518494466358553385
+      purple_tanks_19: 8741813091467130274
+      purple_tanks_17: -5898835367256736366
+      purple_tanks_33: -9024890552002589896
+      purple_tanks_45: -6627171268327185362
+      purple_tanks_29: 8429372917863977733
+      purple_tanks_46: 2565017879218876821
+      purple_tanks_20: 7968447137051941723
+      purple_tanks_23: 5058696994734787381
+      purple_tanks_26: -437334145123255800
+      purple_tanks_27: -3500228110688344004
+      purple_tanks_57: 3148189235782709974
+      purple_tanks_52: -5339720823516619617
+      purple_tanks_68: 8679273468399239381
+      purple_tanks_65: 6840930502301119751
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

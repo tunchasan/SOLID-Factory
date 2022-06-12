@@ -21,26 +21,27 @@ namespace LocomotionSystem.Class
         }
 
         #region Rotation
-        public bool CanRotate { get; private set; }
+        
+        public bool ShouldRotate { get; private set; }
+        public bool CanRotate()
+        {
+            return ShouldRotate && Input.MovementInput.magnitude > 0;
+        }
         public void StartRotation()
         {
-            CanRotate = true;
+            ShouldRotate = true;
         }
         public void ProcessRotation()
         {
-            if (CanRotate)
+            if (CanRotate())
             {
                 var angle = Mathf.Atan2(Input.RotationInput.y, Input.RotationInput.x) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                OnLocomotion?.Invoke();
             }
-            else
-                OnCancelledLocomotion?.Invoke();
         }
-        
         public void StopRotation()
         {
-            CanRotate = false;
+            ShouldRotate = false;
         }
         
         #endregion

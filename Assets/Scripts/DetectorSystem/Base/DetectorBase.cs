@@ -11,6 +11,7 @@ namespace DetectorSystem.Base
         public Action<T> OnDetectionSomething;
         public abstract T DetectionState { protected set; get; }
         protected abstract void OnTriggerEnter2D(Collider2D col);
+        protected abstract void OnTriggerStay2D(Collider2D other);
         protected abstract void OnTriggerExit2D(Collider2D col);
     }
 }

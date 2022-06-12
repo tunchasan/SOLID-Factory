@@ -27,48 +27,57 @@ namespace LocomotionSystem.Class
         #region Movement
 
         private Rigidbody2D _rigidbody2D = null;
-        public bool CanMove { get; private set; }
+        public bool ShouldMove { get; private set; }
+        public bool CanMove()
+        {
+            return ShouldMove && Input.MovementInput.magnitude > 0;
+        }
         public void StartMovement()
         {
-            CanMove = true;
+            ShouldMove = true;
         }
         public void ProcessMovement()
         {
-            if (CanMove)
+            if (CanMove())
             {
                 _rigidbody2D.velocity = Input.MovementInput * (100F * Time.fixedDeltaTime);
                 OnLocomotion?.Invoke();
             }
             else
+            {
+                _rigidbody2D.velocity = Vector2.zero;
                 OnCancelledLocomotion?.Invoke();
+            }
         }
         public void StopMovement()
         {
-            CanMove = false;
+            ShouldMove = false;
         }
 
         #endregion
 
         #region Rotation
-        public bool CanRotate { get; private set; }
+        
+        public bool ShouldRotate { get; private set; }
+        public bool CanRotate()
+        {
+            return ShouldRotate && Input.RotationInput.magnitude > 0;
+        }
         public void StartRotation()
         {
-            CanRotate = true;
+            ShouldRotate = true;
         }
         public void ProcessRotation()
         {
-            if (CanRotate)
+            if (CanRotate())
             {
                 var angle = Mathf.Atan2(Input.RotationInput.y, Input.RotationInput.x) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                OnLocomotion?.Invoke();
             }
-            else
-                OnCancelledLocomotion?.Invoke();
         }
         public void StopRotation()
         {
-            CanRotate = false;
+            ShouldRotate = false;
         }
 
         #endregion

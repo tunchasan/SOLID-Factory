@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Linq;
 using BlockSystem;
 using PlacerSystem.Base;
@@ -15,34 +14,52 @@ namespace TankSystem.Units.PlacerUnit.Base
         #region Initializations
         public override void Initialize(bool hasBlocked)
         {
-            base.Initialize(hasBlocked);
             _storage = GetComponentInChildren<StorageBase>();
             _placer = GetComponentInChildren<PlacerBase>();
-            _placer.Initialize();
-            _storage.Initialize();
-            _storage.OnStore += OnStore;
-            _placer.OnPlace += OnPlace;
+            
+            base.Initialize(hasBlocked);
+            _placer.Initialize(hasBlocked);
+            _storage.Initialize(hasBlocked);
+            
+            _placer.OnPlaceRequest += Place;
+            _placer.OnPlaced += OnPlaced;
+            _storage.OnStored += OnStored;
         }
-        protected virtual void OnDisable()
+        private void OnDisable()
         {
-            _storage.OnStore -= OnStore;
-            _placer.OnPlace -= OnPlace;
+            _placer.OnPlaceRequest -= Place;
+            _placer.OnPlaced -= OnPlaced;
+            _storage.OnStored -= OnStored;
         }
         #endregion
         
-        protected virtual void OnStore(IStorable storableElem)
+        public virtual void Store(IStorable storableElem)
         {
             if (HasBlocked)
             {
-                Debug.LogWarning(($"OnStore process has blocked in {name}"));
+                Debug.LogWarning(($"Store process has blocked in {name}"));
 
                 return;
             }
             
-            _placer.OnReceiveElement(storableElem.GetTarget());
+            _storage.StoreElement(storableElem);
         }
+        public virtual void Place()
+        {
+            if (HasBlocked)
+            {
+                Debug.LogWarning(($"Place process has blocked in {name}"));
 
-        protected virtual void OnPlace(List<IPlaceable> placeElements)
+                return;
+            }
+
+            var placeElements = _storage.Storages
+                .Select(storeElem => storeElem.GetTarget().GetComponent<IPlaceable>())
+                .Where(placeElem => placeElem != null).ToList();
+            
+            _placer.PlaceElements(placeElements);
+        }
+        protected virtual void OnPlaced(IPlaceable placedElement)
         {
             if (HasBlocked)
             {
@@ -51,22 +68,30 @@ namespace TankSystem.Units.PlacerUnit.Base
                 return;
             }
             
-            var list = placeElements.Select(elem => elem.GetTarget()).ToList();
-            _storage.RemoveElements(list);
+            _storage.RemoveElement(placedElement.GetTarget().GetComponent<IStorable>());
+        }
+        protected virtual void OnStored(IStorable storedElement)
+        {
+            if (HasBlocked)
+            {
+                Debug.LogWarning(($"OnPlace process has blocked in {name}"));
+
+                return;
+            }
+            
+            // TODO
         }
 
         public override void Block()
         {
             base.Block();
-            _storage.Block();
             _placer.Block();
         }
-
         public override void UnBlock()
         {
             base.UnBlock();
-            _storage.UnBlock();
             _placer.UnBlock();
+            _storage.UnBlock();
         }
     }
 }
