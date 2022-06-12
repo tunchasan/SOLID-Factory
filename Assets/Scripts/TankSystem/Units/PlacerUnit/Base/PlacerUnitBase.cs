@@ -67,7 +67,7 @@ namespace TankSystem.Units.PlacerUnit.Base
 
                 return;
             }
-            
+
             _storage.RemoveElement(placedElement.GetTarget().GetComponent<IStorable>());
         }
         protected virtual void OnStored(IStorable storedElement)

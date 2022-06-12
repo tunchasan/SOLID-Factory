@@ -1,4 +1,5 @@
 using AreaSystem.Class.PlaceArea;
+using AreaSystem.Class.PlaceArea.Base;
 using DetectorSystem.Base;
 using UnityEngine;
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using AreaSystem.Class.PlaceArea;
+using AreaSystem.Class.PlaceArea.Base;
 using BlockSystem;
 using DetectorSystem.Base;
 using DetectorSystem.Class;
@@ -44,8 +45,8 @@ namespace PlacerSystem.Base
             for (var i = target.Count - 1; i >= 0; i--)
             {
                 var elem = target[i];
-                placeableAreaDetector.DetectionState.OnReceivePlaceableElement(elem);
                 elem.UnPossesBy();
+                placeableAreaDetector.DetectionState.OnReceivePlaceableElement(elem);
                 target.RemoveAt(i);
                 OnPlaced?.Invoke(elem);
             }
