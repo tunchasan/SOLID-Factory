@@ -9,7 +9,7 @@ namespace AreaSystem.Class.PlaceArea.Base
     public abstract class PlaceableAreaBase : AreaBase, IPlaceableArea
     {
         protected AreaPlacerBase AreaPlacer = null;
-        public Action OnPlacedElementToArea { get; set; }
+        public Action<IPlaceable> OnPlacedElementToArea { get; set; }
 
         #region Initialization
         
@@ -29,7 +29,6 @@ namespace AreaSystem.Class.PlaceArea.Base
         {
             return gameObject;
         }
-        
         public void OnReceivePlaceableElements(List<IPlaceable> elements)
         {
             Debug.Log($"{elements.Count} new object received to placeArea");
@@ -47,7 +46,7 @@ namespace AreaSystem.Class.PlaceArea.Base
             {
                 if (status)
                 {
-                    OnPlacedElementToArea?.Invoke();
+                    OnPlacedElementToArea?.Invoke(element);
                 }
             });
         }

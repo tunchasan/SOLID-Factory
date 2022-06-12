@@ -1,8 +1,9 @@
+using SourceSystem.Base;
 using UnityEngine;
 
 namespace SourceSystem.Class
 {
-    public class SingleInteractableSource : InteractableSource
+    public class SingleInteractableSourceBase : InteractableSourceBase
     {
         public override void PossesBy(Transform instigator)
         {

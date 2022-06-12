@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 6905221207282572602}
   - component: {fileID: 4492060375140582238}
   - component: {fileID: 4096567766738950591}
+  - component: {fileID: 255972805}
   - component: {fileID: 2817439145000097732}
   m_Layer: 0
   m_Name: Heavy Tank
@@ -326,6 +327,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &255972805
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6905221207282572599}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
 --- !u!114 &2817439145000097732
 MonoBehaviour:
   m_ObjectHideFlags: 0

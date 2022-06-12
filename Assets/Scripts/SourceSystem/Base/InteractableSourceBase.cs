@@ -1,12 +1,12 @@
+using ConveyorBeltSystem.Base;
 using PlacerSystem.Base;
-using SourceSystem.Base;
 using StorageSystem.Base;
 using StorageSystem.Utilities;
 using UnityEngine;
 
-namespace SourceSystem.Class
+namespace SourceSystem.Base
 {
-    public abstract class InteractableSource : SourceBase, IStorable, IPlaceable
+    public abstract class InteractableSourceBase : SourceBase, IStorable, IPlaceable, ITransportable
     {
         public bool CanStorable { get; protected set; } = true;
         public StorageType Type { get; protected set; } = StorageType.Source;
