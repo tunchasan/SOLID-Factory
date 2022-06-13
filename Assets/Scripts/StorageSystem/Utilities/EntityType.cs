@@ -1,6 +1,6 @@
 namespace StorageSystem.Utilities
 {
-    public enum StorageType
+    public enum EntityType
     {
         Source
     }

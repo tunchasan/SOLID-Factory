@@ -11,7 +11,7 @@ namespace StorageSystem.Base
     public abstract class StorageBase : BlockableMonobehaviour
     {
         public Action<IStorable> OnStored { get; set; }
-        protected abstract StorageType Type { get; set; }
+        protected abstract EntityType Type { get; set; }
         public DetectorBase<IStorable> StorableDetector { get; private set; }
         public List<IStorable> Storages { get; private set; } = new List<IStorable>();
 

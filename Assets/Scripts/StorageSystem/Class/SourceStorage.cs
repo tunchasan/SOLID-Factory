@@ -5,6 +5,6 @@ namespace StorageSystem.Class
 {
     public class SourceStorage : StorageBase
     {
-        protected override StorageType Type { get; set; } = StorageType.Source;
+        protected override EntityType Type { get; set; } = EntityType.Source;
     }
 }

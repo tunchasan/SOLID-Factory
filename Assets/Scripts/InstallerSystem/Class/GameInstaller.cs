@@ -23,7 +23,7 @@ namespace InstallerSystem.Class
             // var player = Container.InstantiatePrefabResource("PlayerPresets/Player").transform;
             // Container.InstantiatePrefab(playerAssetData.item).transform.SetParent(player);
             
-            Container.InstantiatePrefabResource("EnvironmentPresets/Environments");
+            // Container.InstantiatePrefabResource("EnvironmentPresets/Environments");
         }
     }
 }

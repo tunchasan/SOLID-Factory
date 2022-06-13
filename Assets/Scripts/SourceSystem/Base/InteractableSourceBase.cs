@@ -8,19 +8,10 @@ namespace SourceSystem.Base
 {
     public abstract class InteractableSourceBase : SourceBase, IStorable, IPlaceable, ITransportable
     {
-        public bool CanStorable { get; protected set; } = true;
-        public StorageType Type { get; protected set; } = StorageType.Source;
-        
-        public virtual void PossesBy(Transform instigator)
-        {
-            transform.SetParent(instigator);           
-        }
-
-        public virtual void UnPossesBy()
-        {
-            transform.SetParent(null);
-        }
-
+        public bool CanStore { get; protected set; } = true;
+        public EntityType Type { get; protected set; } = EntityType.Source;
+        public abstract void PossesBy(Transform instigator);
+        public abstract void UnPossesBy();
         public virtual GameObject GetTarget()
         {
             return gameObject;
