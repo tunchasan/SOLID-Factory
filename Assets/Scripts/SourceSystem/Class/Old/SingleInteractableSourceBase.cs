@@ -1,15 +1,15 @@
-using SourceSystem.Base;
+using SourceSystem.Base.Old;
 using UnityEngine;
 
-namespace SourceSystem.Class
+namespace SourceSystem.Class.Old
 {
     public class SingleInteractableSourceBase : InteractableSourceBase
     {
         public override void PossesBy(Transform instigator)
         {
-            if (CanStore)
+            if (Status)
             {
-                CanStore = false;
+                Status = false;
                 
                 transform.SetParent(instigator);           
             }

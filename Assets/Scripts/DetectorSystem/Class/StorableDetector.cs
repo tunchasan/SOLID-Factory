@@ -1,4 +1,5 @@
 using DetectorSystem.Base;
+using SourceSystem.Base;
 using StorageSystem.Base;
 using UnityEngine;
 
@@ -7,28 +8,37 @@ namespace DetectorSystem.Class
     public class StorableDetector : DetectorBase<IStorable>
     {
         public override IStorable DetectionState { get; protected set; }
-
+        private static IStorable ValidateDetection(Component target)
+        {
+            return target.TryGetComponent(out SourceBase source) ? 
+                source.IsStorable() : 
+                target.GetComponent<IStorable>();
+        }
         protected override void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.TryGetComponent(out IStorable storable))
+            var storable = ValidateDetection(col);
+            
+            if (storable != null)
             {
                 OnDetectionSomething?.Invoke(storable);
                 DetectionState = storable;
             }
         }
-
         protected override void OnTriggerStay2D(Collider2D other)
         {
-            if (other.TryGetComponent(out IStorable storable))
+            var storable = ValidateDetection(other);
+            
+            if (storable != null)
             {
                 OnDetectionSomething?.Invoke(storable);
                 DetectionState = storable;
             }
         }
-
         protected override void OnTriggerExit2D(Collider2D col)
         {
-            if (col.TryGetComponent(out IStorable storable))
+            var storable = ValidateDetection(col);
+            
+            if (storable != null)
             {
                 DetectionState = null;
             }

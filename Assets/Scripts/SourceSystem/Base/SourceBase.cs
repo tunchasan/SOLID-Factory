@@ -1,127 +1,97 @@
 using ConveyorBeltSystem.Base;
 using DetectorSystem.Base;
 using PlacerSystem.Base;
+using SourceSystem.Class;
+using SourceSystem.Enums;
 using StorageSystem.Base;
 using StorageSystem.Utilities;
 using UnityEngine;
 
 namespace SourceSystem.Base
 {
-    public abstract class SourceBase : MonoBehaviour
+    public abstract class SourceBase : MonoBehaviour, ISource
     {
+        [SerializeField] private SourcePreset preset = null;
         protected IStorable Storable { get; set; } = null;
         protected IPlaceable Placeable { get; set; } = null;
         protected IDetectable Detectable { get; set; } = null;
         protected ITransportable Transportable { get; set; } = null;
 
-        private void Awake()
+        #region Behaviour
+        private void Start()
         {
-            SetBehaviour();
+            InitializeBehaviour();
         }
+        private void InitializeBehaviour()
+        {
+            switch (preset.detectType)
+            {
+                case DetectableType.CanDetect:
+                    Detectable = new CanDetect(gameObject);
+                    break;
+                case DetectableType.CanNotDetect:
+                    Detectable = new CanNotDetect();
+                    break;
+            }
 
-        protected virtual void SetBehaviour()
-        {
-            Storable = new CanNotStorable(EntityType.Source);
-            Placeable = new CanNotPlaceable();
-            Detectable = new CanNotDetectable();
-            Transportable = new CanTransportable(gameObject);
-        }
-    }
+            switch (preset.placeType)
+            {
+                case PlaceableType.CanPlace:
+                    Placeable = new CanPlace();
+                    break;
+                case PlaceableType.CanNotPlace:
+                    Placeable = new CanNotPlace();
+                    break;
+            }
 
-    public class CanTransportable : ITransportable
-    {
-        private readonly GameObject _target = null;
-        public CanTransportable(GameObject target)
-        {
-            _target = target;
-        }
-        public GameObject GetTarget()
-        {
-            return _target;
-        }
-    }
-    public class CanNotTransportable : ITransportable
-    {
-        public GameObject GetTarget()
-        {
-            return null;
-        }
-    }
-    public class CanDetectable : IDetectable
-    {
-        private readonly GameObject _target = null;
-        public CanDetectable(GameObject target)
-        {
-            _target = target;
-        }
-        public GameObject GetTarget()
-        {
-            return _target;
-        }
-    }
-    public class CanNotDetectable : IDetectable
-    {
-        public GameObject GetTarget()
-        {
-            return null;
-        }
-    }
-    public class CanPlaceable : IPlaceable
-    {
-        private readonly GameObject _target = null;
-        public GameObject GetTarget()
-        {
-            return _target;
-        }
-        public void UnPossesBy()
-        {
-            _target.transform.SetParent(null);
-        }
-    }
-    public class CanNotPlaceable : IPlaceable
-    {
-        public GameObject GetTarget()
-        {
-            return null;
-        }
-        public void UnPossesBy()
-        {
-            // no-op
-        }
-    }
-    public class CanStorable : IStorable
-    {
-        private readonly GameObject _target = null;
-        public EntityType Type { get; }
-        public CanStorable(GameObject target, EntityType type)
-        {
-            _target = target;
-            Type = type;
-        }
-        public GameObject GetTarget()
-        {
-            return _target;
-        }
-        public void PossesBy(Transform instigator)
-        {
-            _target.transform.SetParent(instigator);
-        }
-    }
+            switch (preset.storeType)
+            {
+                case StorableType.CanStoreSingle:
+                    Storable = new CanStoreSingle(gameObject, EntityType.Source);
+                    break;
+                case StorableType.CanStoreMultiple:
+                    Storable = new CanStoreMultiple(gameObject, EntityType.Source);
+                    break;
+                case StorableType.CanNotStore:
+                    Storable = new CanNotStore(EntityType.Source);
+                    break;
+            }
 
-    public class CanNotStorable : IStorable
-    {
-        public CanNotStorable(EntityType type)
-        {
-            Type = type;
+            switch (preset.transportType)
+            {
+                case TransportableType.CanTransport:
+                    Transportable = new CanTransport(gameObject);
+                    break;
+                case TransportableType.CanNotTransport:
+                    Transportable = new CanNotTransport();
+                    break;
+            }
         }
-        public GameObject GetTarget()
+        public void SetBehaviour(IStorable store, IPlaceable place, 
+            IDetectable detect, ITransportable transport)
         {
-            return null;
+            Storable = store;
+            Placeable = place;
+            Detectable = detect;
+            Transportable = transport;
         }
-        public EntityType Type { get; }
-        public void PossesBy(Transform instigator)
+        #endregion
+        
+        public virtual IStorable IsStorable()
         {
-            // no-op
+            return Storable;
+        }
+        public virtual IPlaceable IsPlaceable()
+        {
+            return Placeable;
+        }
+        public virtual IDetectable IsDetectable()
+        {
+            return Detectable;
+        }
+        public virtual ITransportable IsTransportable()
+        {
+            return Transportable;
         }
     }
 }

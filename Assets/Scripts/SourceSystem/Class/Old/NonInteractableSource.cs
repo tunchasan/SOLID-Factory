@@ -1,6 +1,6 @@
 using SourceSystem.Base;
 
-namespace SourceSystem.Class
+namespace SourceSystem.Class.Old
 {
     public class NonInteractableSource : SourceBase
     {

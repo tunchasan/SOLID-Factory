@@ -1,7 +1,7 @@
-using SourceSystem.Base;
+using SourceSystem.Base.Old;
 using UnityEngine;
 
-namespace SourceSystem.Class
+namespace SourceSystem.Class.Old
 {
     public class MultipleInteractableSourceBase : InteractableSourceBase
     {
