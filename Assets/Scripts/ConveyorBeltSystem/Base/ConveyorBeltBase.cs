@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using BlockSystem;
 using DG.Tweening;
 using PlacerSystem.Base;
+using SourceSystem.Base;
 using UnityEngine;
 
 namespace ConveyorBeltSystem.Base
@@ -99,11 +100,13 @@ namespace ConveyorBeltSystem.Base
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.TryGetComponent(out ITransportable placeable))
+            var transportable = other.GetComponent<ISource>()?.IsTransportable();
+            
+            if (transportable != null && transportable.GetTarget() != null)
             {
-                if (!list.Contains(placeable.GetTarget().gameObject))
+                if (!list.Contains(transportable.GetTarget().gameObject))
                 {
-                    list.Add(placeable.GetTarget().gameObject);
+                    list.Add(transportable.GetTarget().gameObject);
                 }
             }
         }

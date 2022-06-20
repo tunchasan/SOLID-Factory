@@ -7,7 +7,7 @@ namespace SourceSystem.Class
     public abstract class CanStore : IStorable
     {
         protected readonly GameObject Target = null;
-        public bool Status { get; protected set; } = false;
+        public bool Status { get; protected set; } = true;
         public EntityType Type { get; }
         protected CanStore(GameObject target, EntityType type)
         {

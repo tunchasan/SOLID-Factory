@@ -9,6 +9,15 @@ namespace AreaSystem.Class.PlaceArea.Class
     {
         public override void Place(IPlaceable element, Action<bool> onComplete = null)
         {
+            if (element.GetTarget() == null)
+            {
+                onComplete?.Invoke(false);
+                
+                Debug.Log($"{element} is not suitable.");
+                
+                return;
+            }
+            
             if (PlacedElements.Contains(element))
             {
                 onComplete?.Invoke(false);

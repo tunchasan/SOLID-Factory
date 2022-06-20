@@ -6,6 +6,12 @@ namespace SourceSystem.Class
     public class CanPlace : IPlaceable
     {
         private readonly GameObject _target = null;
+
+        public CanPlace(GameObject target)
+        {
+            _target = target;
+        }
+        
         public GameObject GetTarget()
         {
             return _target;

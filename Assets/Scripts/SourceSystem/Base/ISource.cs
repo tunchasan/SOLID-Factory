@@ -2,6 +2,7 @@ using ConveyorBeltSystem.Base;
 using DetectorSystem.Base;
 using PlacerSystem.Base;
 using StorageSystem.Base;
+using UnityEngine;
 
 namespace SourceSystem.Base
 {
@@ -11,5 +12,6 @@ namespace SourceSystem.Base
         IPlaceable IsPlaceable();
         IDetectable IsDetectable();
         ITransportable IsTransportable();
+        void SetVisual(Sprite sprite);
     }
 }

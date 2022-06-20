@@ -40,6 +40,7 @@ namespace StorageSystem.Base
                 Storages.Add(elem);
                 elem.PossesBy(transform);
                 OnStored?.Invoke(elem);
+                Debug.Log(elem);
             }
         }
         protected virtual bool CanStoreElement(IStorable elem)
@@ -53,7 +54,8 @@ namespace StorageSystem.Base
             
             return elem != null
                    && !Storages.Contains(elem)
-                   && elem.Type == Type;
+                   && elem.Type == Type
+                   && elem.GetTarget() != null;
         }
         protected virtual bool CanRemoveElement(IStorable elem)
         {

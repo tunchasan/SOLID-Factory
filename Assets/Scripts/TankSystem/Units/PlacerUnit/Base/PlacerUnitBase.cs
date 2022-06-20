@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using System.Linq;
 using BlockSystem;
 using PlacerSystem.Base;
+using SourceSystem.Base;
 using StorageSystem.Base;
 using UnityEngine;
 
@@ -54,8 +56,12 @@ namespace TankSystem.Units.PlacerUnit.Base
             }
 
             var placeElements = _storage.Storages
-                .Select(storeElem => storeElem.GetTarget().GetComponent<IPlaceable>())
-                .Where(placeElem => placeElem != null).ToList();
+                .Select(target => target.GetTarget()?.GetComponent<ISource>()?.IsPlaceable())
+                .Where(storable => storable != null).ToList();
+
+            // var placeElements = _storage.Storages
+            //     .Select(storeElem => storeElem.GetTarget().GetComponent<ISource>())
+            //     .Where(placeElem => placeElem.IsPlaceable() != null).ToList();
             
             _placer.PlaceElements(placeElements);
         }
@@ -68,7 +74,7 @@ namespace TankSystem.Units.PlacerUnit.Base
                 return;
             }
 
-            _storage.RemoveElement(placedElement.GetTarget().GetComponent<IStorable>());
+            _storage.RemoveElement(placedElement.GetTarget()?.GetComponent<IStorable>());
         }
         protected virtual void OnStored(IStorable storedElement)
         {

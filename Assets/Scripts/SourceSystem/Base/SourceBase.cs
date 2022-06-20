@@ -24,56 +24,42 @@ namespace SourceSystem.Base
         }
         private void InitializeBehaviour()
         {
-            switch (preset.detectType)
+            var target = gameObject;
+            Detectable = preset.detectType switch
             {
-                case DetectableType.CanDetect:
-                    Detectable = new CanDetect(gameObject);
-                    break;
-                case DetectableType.CanNotDetect:
-                    Detectable = new CanNotDetect();
-                    break;
-            }
+                DetectableType.CanDetect => new CanDetect(target),
+                DetectableType.CanNotDetect => new CanNotDetect(),
+                _ => Detectable
+            };
 
-            switch (preset.placeType)
+            Placeable = preset.placeType switch
             {
-                case PlaceableType.CanPlace:
-                    Placeable = new CanPlace();
-                    break;
-                case PlaceableType.CanNotPlace:
-                    Placeable = new CanNotPlace();
-                    break;
-            }
+                PlaceableType.CanPlace => new CanPlace(target),
+                PlaceableType.CanNotPlace => new CanNotPlace(),
+                _ => Placeable
+            };
 
-            switch (preset.storeType)
+            Storable = preset.storeType switch
             {
-                case StorableType.CanStoreSingle:
-                    Storable = new CanStoreSingle(gameObject, EntityType.Source);
-                    break;
-                case StorableType.CanStoreMultiple:
-                    Storable = new CanStoreMultiple(gameObject, EntityType.Source);
-                    break;
-                case StorableType.CanNotStore:
-                    Storable = new CanNotStore(EntityType.Source);
-                    break;
-            }
+                StorableType.CanStoreSingle => new CanStoreSingle(target, EntityType.Source),
+                StorableType.CanStoreMultiple => new CanStoreMultiple(target, EntityType.Source),
+                StorableType.CanNotStore => new CanNotStore(EntityType.Source),
+                _ => Storable
+            };
 
-            switch (preset.transportType)
+            Transportable = preset.transportType switch
             {
-                case TransportableType.CanTransport:
-                    Transportable = new CanTransport(gameObject);
-                    break;
-                case TransportableType.CanNotTransport:
-                    Transportable = new CanNotTransport();
-                    break;
-            }
+                TransportableType.CanTransport => new CanTransport(target),
+                TransportableType.CanNotTransport => new CanNotTransport(),
+                _ => Transportable
+            };
+            
+            SetVisual(preset.visual);
         }
-        public void SetBehaviour(IStorable store, IPlaceable place, 
-            IDetectable detect, ITransportable transport)
+        public void SetBehaviour(SourcePreset sourcePreset)
         {
-            Storable = store;
-            Placeable = place;
-            Detectable = detect;
-            Transportable = transport;
+            preset = sourcePreset;
+            InitializeBehaviour();
         }
         #endregion
         
@@ -92,6 +78,13 @@ namespace SourceSystem.Base
         public virtual ITransportable IsTransportable()
         {
             return Transportable;
+        }
+
+        public void SetVisual(Sprite sprite)
+        {
+            var visual = gameObject.GetComponentInChildren<SpriteRenderer>();
+            if (visual)
+                visual.sprite = preset.visual;
         }
     }
 }

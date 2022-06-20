@@ -10,5 +10,6 @@ namespace SourceSystem.Class
         public PlaceableType placeType;
         public StorableType storeType;
         public TransportableType transportType;
+        public Sprite visual;
     }
 }
