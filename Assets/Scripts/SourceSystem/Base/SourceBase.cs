@@ -1,5 +1,6 @@
 using ConveyorBeltSystem.Base;
 using DetectorSystem.Base;
+using GameEventsSystem;
 using PlacerSystem.Base;
 using SourceSystem.Class;
 using SourceSystem.Enums;
@@ -18,10 +19,6 @@ namespace SourceSystem.Base
         protected ITransportable Transportable { get; set; } = null;
 
         #region Behaviour
-        private void Start()
-        {
-            InitializeBehaviour();
-        }
         private void InitializeBehaviour()
         {
             var target = gameObject;
@@ -79,12 +76,21 @@ namespace SourceSystem.Base
         {
             return Transportable;
         }
-
         public void SetVisual(Sprite sprite)
         {
             var visual = gameObject.GetComponentInChildren<SpriteRenderer>();
             if (visual)
                 visual.sprite = preset.visual;
+        }
+
+        private void OnEnable()
+        {
+            GameEvents.StartEvent += InitializeBehaviour;
+        }
+        
+        private void OnDisable()
+        {
+            GameEvents.StartEvent -= InitializeBehaviour;
         }
     }
 }

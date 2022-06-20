@@ -1,5 +1,5 @@
+using GameEventsSystem;
 using InputControllerSystem.Settings;
-using PlayerSystem;
 using PlayerSystem.Data;
 using TankSystem.Class;
 using TankSystem.Data;
@@ -11,6 +11,9 @@ namespace InstallerSystem.Class
     {
         public override void InstallBindings()
         {
+            var gameEvents = Container.InstantiatePrefabResource("GamePresets/GameEvents").GetComponent<GameEvents>();
+            Container.Bind<GameEvents>().FromInstance(gameEvents);
+            
             var inputController = Container.InstantiatePrefabResource("SettingsPresets/InputSettings").GetComponent<InputControllerSettingsBase>();
             Container.BindInstance(inputController.Controller).AsSingle();
             

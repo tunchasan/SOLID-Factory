@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using BlockSystem;
 using DG.Tweening;
+using GameEventsSystem;
 using PlacerSystem.Base;
 using SourceSystem.Base;
 using UnityEngine;
@@ -22,7 +23,7 @@ namespace ConveyorBeltSystem.Base
 
         private float _conveyorLength = 0F;
 
-        private void Start()
+        private void StartSystem()
         {
             Initialize(false);
 
@@ -109,6 +110,16 @@ namespace ConveyorBeltSystem.Base
                     list.Add(transportable.GetTarget().gameObject);
                 }
             }
+        }
+
+        private void OnEnable()
+        {
+            GameEvents.StartEvent += StartSystem;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.StartEvent -= StartSystem;
         }
     }
 
