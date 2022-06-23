@@ -9,20 +9,15 @@ using UnityEngine;
 
 namespace SourceSystem.Class
 {
-    [CreateAssetMenu]
-    public class SourceConfigData : ScriptableObject
+    [CreateAssetMenu(menuName = "Source/ConfigData", fileName = "SourceConfigData", order = 0)]
+    public class SourceConfigData : SourceConfigDataBase
     {
-        [SerializeField]
-        private DetectableType detectType;
-        [SerializeField]
-        private PlaceableType placeType;
-        [SerializeField]
-        private StorableType storeType;
-        [SerializeField]
-        private TransportableType transportType;
-        public Sprite visual;
-
-        public IDetectable InitializeDetectableBehaviour(GameObject gameObject)
+        public override Sprite Visual
+        {
+            get => visual;
+            protected set => visual = value;
+        }
+        public override IDetectable InitializeDetectableBehaviour(GameObject gameObject)
         {
             return detectType switch
             {
@@ -31,7 +26,7 @@ namespace SourceSystem.Class
                 _ => throw new NotImplementedException($"{detectType} is not implemented by {GetType()}")
             };
         }
-        public IStorable InitializeStorableBehaviour(GameObject gameObject)
+        public override IStorable InitializeStorableBehaviour(GameObject gameObject)
         {
             return storeType switch
             {
@@ -41,7 +36,7 @@ namespace SourceSystem.Class
                 _ => throw new NotImplementedException($"{storeType} is not implemented by {GetType()}")
             };
         }
-        public IPlaceable InitializePlaceableBehaviour(GameObject gameObject)
+        public override IPlaceable InitializePlaceableBehaviour(GameObject gameObject)
         {
             return placeType switch
             {
@@ -50,7 +45,7 @@ namespace SourceSystem.Class
                 _ => throw new NotImplementedException($"{placeType} is not implemented by {GetType()}")
             };
         }
-        public ITransportable InitializeTransportableBehaviour(GameObject gameObject)
+        public override ITransportable InitializeTransportableBehaviour(GameObject gameObject)
         {
             return transportType switch
             {
