@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using AreaSystem.Base;
+using GameEventsSystem;
 using PlacerSystem.Base;
 using UnityEngine;
 
@@ -12,17 +13,23 @@ namespace AreaSystem.Class.PlaceArea.Base
         public Action<IPlaceable> OnPlacedElementToArea { get; set; }
 
         #region Initialization
-        
-        private void Start()
-        {
-            Initialize();
-        }
+
         protected virtual void Initialize()
         {
             AreaPlacer = GetComponentInChildren<AreaPlacerBase>();
             AreaPlacer.Initialize();
         }
-        
+
+        private void OnEnable()
+        {
+            GameEvents.StartEvent += Initialize;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.StartEvent -= Initialize;
+        }
+
         #endregion
         
         public GameObject GetTarget()

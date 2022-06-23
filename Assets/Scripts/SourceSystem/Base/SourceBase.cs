@@ -3,78 +3,62 @@ using DetectorSystem.Base;
 using GameEventsSystem;
 using PlacerSystem.Base;
 using SourceSystem.Class;
-using SourceSystem.Enums;
 using StorageSystem.Base;
-using StorageSystem.Utilities;
 using UnityEngine;
 
 namespace SourceSystem.Base
 {
     public abstract class SourceBase : MonoBehaviour, ISource
     {
-        [SerializeField] private SourcePreset preset = null;
+        [SerializeField] private CD_Source configData = null;
         protected IStorable Storable { get; set; } = null;
         protected IPlaceable Placeable { get; set; } = null;
         protected IDetectable Detectable { get; set; } = null;
         protected ITransportable Transportable { get; set; } = null;
 
         #region Behaviour
-        private void InitializeBehaviour()
+        public void SetBehaviour(CD_Source config)
         {
-            var target = gameObject;
-            Detectable = preset.detectType switch
-            {
-                DetectableType.CanDetect => new CanDetect(target),
-                DetectableType.CanNotDetect => new CanNotDetect(),
-                _ => Detectable
-            };
+            configData = config;
 
-            Placeable = preset.placeType switch
-            {
-                PlaceableType.CanPlace => new CanPlace(target),
-                PlaceableType.CanNotPlace => new CanNotPlace(),
-                _ => Placeable
-            };
-
-            Storable = preset.storeType switch
-            {
-                StorableType.CanStoreSingle => new CanStoreSingle(target, EntityType.Source),
-                StorableType.CanStoreMultiple => new CanStoreMultiple(target, EntityType.Source),
-                StorableType.CanNotStore => new CanNotStore(EntityType.Source),
-                _ => Storable
-            };
-
-            Transportable = preset.transportType switch
-            {
-                TransportableType.CanTransport => new CanTransport(target),
-                TransportableType.CanNotTransport => new CanNotTransport(),
-                _ => Transportable
-            };
-            
-            SetVisual(preset.visual);
+            SetBehaviour();
         }
-        public void SetBehaviour(SourcePreset sourcePreset)
+
+        protected virtual void SetBehaviour()
         {
-            preset = sourcePreset;
-            InitializeBehaviour();
+            Detectable = configData.InitializeDetectableBehaviour(gameObject);
+            Placeable = configData.InitializePlaceableBehaviour(gameObject);
+            Storable = configData.InitializeStorableBehaviour(gameObject);
+            Transportable = configData.InitializeTransportableBehaviour(gameObject);
         }
+
+        public void SetBehaviour(IStorable storable, IPlaceable placeable, 
+            IDetectable detectable, ITransportable transportable)
+        {
+            Storable = storable;
+            Placeable = placeable;
+            Detectable = detectable;
+            Transportable = transportable;
+        }
+        
         #endregion
         
         public virtual IStorable IsStorable()
         {
-            return Storable;
+            return Storable as CanStore;
         }
+        
         public virtual IPlaceable IsPlaceable()
         {
-            return Placeable;
+            return Placeable as CanPlace;
         }
         public virtual IDetectable IsDetectable()
         {
-            return Detectable;
+            return Detectable as CanDetect;
         }
         public virtual ITransportable IsTransportable()
         {
-            return Transportable;
+            return Transportable as CanTransport;
         }
         public void SetVisual(Sprite sprite)
         {
@@ -85,12 +69,20 @@ namespace SourceSystem.Base
 
         private void OnEnable()
         {
-            GameEvents.StartEvent += InitializeBehaviour;
+            GameEvents.StartEvent += SetBehaviour;
         }
         
         private void OnDisable()
         {
-            GameEvents.StartEvent -= InitializeBehaviour;
+            GameEvents.StartEvent -= SetBehaviour;
+        }
+    }
+
+    public class Triangle : SourceBase
+    {
+        protected override void SetBehaviour()
+        {
+            Storable = new CanStoreSingle();
         }
     }
 }

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using AreaSystem.Class.PlaceArea;
 using AreaSystem.Class.PlaceArea.Base;
 using BlockSystem;
 using DetectorSystem.Base;

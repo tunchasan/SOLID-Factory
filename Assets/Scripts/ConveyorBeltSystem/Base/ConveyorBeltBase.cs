@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using BlockSystem;
 using DG.Tweening;
 using GameEventsSystem;
-using PlacerSystem.Base;
+using NodeSystem;
 using SourceSystem.Base;
 using UnityEngine;
 
 namespace ConveyorBeltSystem.Base
 {
-    public class ConveyorBeltBase : BlockableMonobehaviour
+    public class ConveyorBeltBase : BlockableMonobehaviour, INode
     {
         [SerializeField] protected Transform StartLocation = null;
         [SerializeField] protected Transform EndLocation = null;
@@ -112,6 +112,14 @@ namespace ConveyorBeltSystem.Base
             }
         }
 
+        private void OnTriggerStay(Collider other)
+        {
+            if (other.TryGetComponent(out INode nextNode))
+            {
+                ValidateNode(nextNode);
+            }
+        }
+
         private void OnEnable()
         {
             GameEvents.StartEvent += StartSystem;
@@ -121,6 +129,37 @@ namespace ConveyorBeltSystem.Base
         {
             GameEvents.StartEvent -= StartSystem;
         }
+
+        #region NodeSystem
+
+        public INode NextNode { get; private set; } = null;
+
+        private void Update()
+        {
+            Debug.Log(NextNode);
+        }
+
+        public void Input()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Process()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Output()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ValidateNode(INode nextNode)
+        {
+            NextNode = nextNode;
+        }
+
+        #endregion
     }
 
     public interface ITransportable

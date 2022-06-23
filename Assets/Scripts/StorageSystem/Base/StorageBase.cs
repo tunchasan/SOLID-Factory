@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using BlockSystem;
 using DetectorSystem.Base;
 using DetectorSystem.Class;
+using SourceSystem.Class;
 using StorageSystem.Utilities;
 using UnityEngine;
 
@@ -55,7 +56,7 @@ namespace StorageSystem.Base
             return elem != null
                    && !Storages.Contains(elem)
                    && elem.Type == Type
-                   && elem.GetTarget() != null;
+                   && elem is CanStore;
         }
         protected virtual bool CanRemoveElement(IStorable elem)
         {

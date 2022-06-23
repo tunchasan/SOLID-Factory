@@ -10,13 +10,18 @@ namespace DetectorSystem.Class
         public override IStorable DetectionState { get; protected set; }
         private static IStorable ValidateDetection(Component target)
         {
-            return target.TryGetComponent(out SourceBase source) ? 
-                source.IsStorable() : 
+            return target.TryGetComponent(out ISource source) ? 
+                source.IsStorable(): 
                 target.GetComponent<IStorable>();
         }
         protected override void OnTriggerEnter2D(Collider2D col)
         {
-            var storable = ValidateDetection(col);
+            //var storable = ValidateDetection(col);
+
+            if (col.TryGetComponent(out IStorable storable))
+            {
+                
+            }
             
             if (storable != null)
             {

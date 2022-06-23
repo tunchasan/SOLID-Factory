@@ -7,8 +7,6 @@ namespace GameEventsSystem
     {
         public static Action AwakeEvent;
         public static Action StartEvent;
-        public static Action UpdateEvent;
-        public static Action FixedUpdateEvent;
         public static Action BlockEvent;
 
         private void Awake()
@@ -19,15 +17,6 @@ namespace GameEventsSystem
         {
             StartEvent?.Invoke();
         }
-        private void Update()
-        {
-            UpdateEvent?.Invoke();
-        }
-        private void FixedUpdate()
-        {
-            FixedUpdateEvent?.Invoke();
-        }
-        
         public static void BlockGame()
         {
             BlockEvent?.Invoke();
