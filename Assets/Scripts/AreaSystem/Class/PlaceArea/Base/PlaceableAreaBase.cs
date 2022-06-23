@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using AreaSystem.Base;
-using GameEventsSystem;
 using PlacerSystem.Base;
 using UnityEngine;
+using Zenject;
 
 namespace AreaSystem.Class.PlaceArea.Base
 {
@@ -14,20 +14,11 @@ namespace AreaSystem.Class.PlaceArea.Base
 
         #region Initialization
 
+        [Inject]
         protected virtual void Initialize()
         {
             AreaPlacer = GetComponentInChildren<AreaPlacerBase>();
             AreaPlacer.Initialize();
-        }
-
-        private void OnEnable()
-        {
-            GameEvents.StartEvent += Initialize;
-        }
-
-        private void OnDisable()
-        {
-            GameEvents.StartEvent -= Initialize;
         }
 
         #endregion

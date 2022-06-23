@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using BlockSystem;
 using DG.Tweening;
-using GameEventsSystem;
 using NodeSystem;
 using SourceSystem.Base;
 using UnityEngine;
@@ -23,7 +22,7 @@ namespace ConveyorBeltSystem.Base
 
         private float _conveyorLength = 0F;
 
-        private void StartSystem()
+        private void Start()
         {
             Initialize(false);
 
@@ -118,16 +117,6 @@ namespace ConveyorBeltSystem.Base
             {
                 ValidateNode(nextNode);
             }
-        }
-
-        private void OnEnable()
-        {
-            GameEvents.StartEvent += StartSystem;
-        }
-
-        private void OnDisable()
-        {
-            GameEvents.StartEvent -= StartSystem;
         }
 
         #region NodeSystem

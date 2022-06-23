@@ -16,4 +16,4 @@ MonoBehaviour:
   placeType: 0
   storeType: 1
   transportType: 0
-  visual: {fileID: 7637870703528583553, guid: 31e26fdea85010e4b8674ed3af520595, type: 3}
+  visual: {fileID: -588874106627402442, guid: 31e26fdea85010e4b8674ed3af520595, type: 3}
