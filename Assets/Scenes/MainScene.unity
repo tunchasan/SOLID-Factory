@@ -123,6 +123,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &149003163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4763743605669845546, guid: 493a3c8f5df0cd44fa28559178cfc235, type: 3}
+  m_PrefabInstance: {fileID: 510113757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &149003170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149003163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d14e54aa594a69bec35405062d1886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &279120236
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +216,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5097883324235779246, guid: aa5e33d6f067ca246a74dea7cb3e9589, type: 3}
       propertyPath: m_Name
-      value: Source_B
+      value: PinkSource
       objectReference: {fileID: 0}
     - target: {fileID: 6018026712241739803, guid: aa5e33d6f067ca246a74dea7cb3e9589, type: 3}
       propertyPath: m_RootOrder
@@ -338,7 +355,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 360464888414912743, guid: 493a3c8f5df0cd44fa28559178cfc235, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 493a3c8f5df0cd44fa28559178cfc235, type: 3}
 --- !u!1 &518836245
 GameObject:
@@ -843,7 +861,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5097883324235779246, guid: 8a531c774f58a4944a7f556bb97b4e0a, type: 3}
       propertyPath: m_Name
-      value: Source_C
+      value: GraySource
       objectReference: {fileID: 0}
     - target: {fileID: 6018026712241739803, guid: 8a531c774f58a4944a7f556bb97b4e0a, type: 3}
       propertyPath: m_RootOrder
@@ -967,7 +985,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5097883324235779246, guid: 9a5f940df2c6d484b85fdb9fab786ddc, type: 3}
       propertyPath: m_Name
-      value: Source_A
+      value: RedSource
       objectReference: {fileID: 0}
     - target: {fileID: 6018026712241739803, guid: 9a5f940df2c6d484b85fdb9fab786ddc, type: 3}
       propertyPath: m_RootOrder
