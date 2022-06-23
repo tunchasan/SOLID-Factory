@@ -7,33 +7,13 @@ using UnityEngine;
 
 namespace SourceSystem.Base
 {
-    public  class SourceBehaviourBase
+    public abstract class SourceBehaviourBase
     {
         public IStorable Storable { get; protected set; } = null;
         public IPlaceable Placeable { get; protected set; } = null;
         public IDetectable Detectable { get; protected set; } = null;
         public ITransportable Transportable { get; protected set; } = null;
-
-        public SourceBehaviourBase(SourceConfigDataBase config, GameObject gameObject)
-        {
-            SetBehaviour(config, gameObject);
-        }
-        
-        public virtual void SetBehaviour(IStorable storable, IPlaceable placeable, 
-            IDetectable detectable, ITransportable transportable)
-        {
-            Storable = storable;
-            Placeable = placeable;
-            Detectable = detectable;
-            Transportable = transportable;
-        }
-
-        private void SetBehaviour(SourceConfigDataBase config, GameObject gameObject)
-        {
-            Detectable = config.InitializeDetectableBehaviour(gameObject);
-            Placeable = config.InitializePlaceableBehaviour(gameObject);
-            Storable = config.InitializeStorableBehaviour(gameObject);
-            Transportable = config.InitializeTransportableBehaviour(gameObject);
-        }
+        public abstract void SetBehaviour(IStorable storable, IPlaceable placeable, IDetectable detectable, ITransportable transportable);
+        public abstract void SetBehaviour(SourceConfigDataBase config, GameObject gameObject);
     }
 }

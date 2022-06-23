@@ -1,6 +1,7 @@
+using SourceSystem.Base;
 using UnityEngine;
 
-namespace SourceSystem.Base
+namespace SourceSystem.Class
 {
     public class SourceVisual : SourceVisualBase
     {

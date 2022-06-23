@@ -5,7 +5,7 @@ using SourceSystem.Enums;
 using StorageSystem.Base;
 using UnityEngine;
 
-namespace SourceSystem.Class
+namespace SourceSystem.Base
 {
     public abstract class SourceConfigDataBase : ScriptableObject
     {

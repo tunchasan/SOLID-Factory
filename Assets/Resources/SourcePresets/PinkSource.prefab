@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 4869070731268195573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6018026712241739803}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3818157907930065138, guid: 31e26fdea85010e4b8674ed3af520595, type: 3}
+  m_Sprite: {fileID: 7637870703528583553, guid: 31e26fdea85010e4b8674ed3af520595, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 6018026712241739803}
   - component: {fileID: 951824457869693050}
   - component: {fileID: 3869643229276976164}
-  - component: {fileID: 3022069418053393387}
+  - component: {fileID: 7821169743923634139}
   m_Layer: 0
-  m_Name: Source_C
+  m_Name: PinkSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1c2114ec744219bd773c5e46d3b2b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  configData: {fileID: 11400000, guid: a818548652854c047b82e61881709e66, type: 2}
---- !u!114 &3022069418053393387
+  configData: {fileID: 11400000, guid: 7ac8f4dcaea4f4d498f3d01c72617f90, type: 2}
+--- !u!114 &7821169743923634139
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 106fc5dba94e490f82fb7d28b2dc1900, type: 3}
-  m_Name: SingleInteractableSource
+  m_Name: PinkSource
   m_EditorClassIdentifier: 
   detectType: 0
   placeType: 0

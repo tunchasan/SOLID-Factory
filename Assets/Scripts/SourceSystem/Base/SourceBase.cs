@@ -20,8 +20,9 @@ namespace SourceSystem.Base
         }
         protected virtual void Initialize()
         {
-            _sourceBehaviour = new SourceBehaviour(configData, gameObject);
+            _sourceBehaviour = new SourceBehaviour();
             _sourceVisual = GetComponent<SourceVisual>();
+            _sourceBehaviour.SetBehaviour(configData, gameObject);
             _sourceVisual.SetVisual(configData.Visual);
         }
         public virtual IStorable IsStorable()
@@ -41,4 +42,4 @@ namespace SourceSystem.Base
             return _sourceBehaviour.Transportable as CanTransport;
         }
     }
-}
+} 
