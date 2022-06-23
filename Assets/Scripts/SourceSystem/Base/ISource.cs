@@ -12,6 +12,5 @@ namespace SourceSystem.Base
         IPlaceable IsPlaceable();
         IDetectable IsDetectable();
         ITransportable IsTransportable();
-        void SetVisual(Sprite sprite);
     }
 }

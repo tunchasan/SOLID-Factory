@@ -10,7 +10,7 @@ using UnityEngine;
 namespace SourceSystem.Class
 {
     [CreateAssetMenu]
-    public class CD_Source : ScriptableObject
+    public class SourceConfigData : ScriptableObject
     {
         [SerializeField]
         private DetectableType detectType;
