@@ -1,17 +1,22 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace NodeSystem
 {
-    public interface INode<T>
+    public interface INode<T> : INode
     {
         Queue<T> Elements { get; }
-        float Duration { get; }
-        Action<T> OnOutput { get; }
-        void InitializeNode();
-        void Input(IEnumerable<T> elements);
-        IEnumerator Process();
         void Output(T output);
+    }
+
+    public interface INode
+    {
+        public Action<INode, List<GameObject>> OnOutput { get; set; }
+        float Duration { get; }
+        IEnumerator Process();
+        void InitializeNode();
+        IEnumerable<GameObject> Input(IEnumerable<GameObject> elements);
     }
 }
