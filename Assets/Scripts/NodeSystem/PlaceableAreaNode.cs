@@ -24,11 +24,12 @@ namespace NodeSystem
 
             foreach (var element in elements)
             {
-                var validatedElement = element.ConvertToPlaceable();
-                
-                if (validatedElement != null && !Elements.Contains(validatedElement))
+                if (element.TryGetPlaceable(out var placeable))
                 {
-                    Elements.Enqueue(validatedElement);
+                    if (!Elements.Contains(placeable))
+                    {
+                        Elements.Enqueue(placeable);
+                    }
                 }
 
                 else
@@ -37,7 +38,7 @@ namespace NodeSystem
                 }
             }
 
-            Debug.Log($"Total input element's count : {Elements.Count}");
+            Debug.Log($"PlaceableAreaNode :: Total inputs count : {Elements.Count}");
 
             return notSuitableElements;
         }
@@ -60,17 +61,17 @@ namespace NodeSystem
 
                 if (processingElement != null)
                 {
-                    Output(processingElement);
+                    Debug.Log($"PlaceableAreaNode :: {processingElement} element is processed");
                     
-                    Debug.Log($"{processingElement} element is processed by {name}");
+                    Output(processingElement);
                 }
             }
         }
         public void Output(IPlaceable output)
         {
+            Debug.Log($"PlaceableAreaNode :: Remained element's count is {Elements.Count}");
+
             OnOutput?.Invoke(this, new List<GameObject>{output.GetTarget()});
-            
-            Debug.Log($"Updated input element's count : {Elements.Count}");
         }
         protected override void OnElementPlaced(IPlaceable element)
         {

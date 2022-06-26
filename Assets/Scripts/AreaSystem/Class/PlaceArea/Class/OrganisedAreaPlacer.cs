@@ -30,12 +30,10 @@ namespace AreaSystem.Class.PlaceArea.Class
             AreaPlacerAnimation.AnimatePlacing(element.GetTarget().transform, status =>
             {
                 if (status)
-                {
                     PlacedElements.Add(element);
-                }
+                
+                onComplete?.Invoke(status);
             });
-            
-            onComplete?.Invoke(true);
         }
     }
 }

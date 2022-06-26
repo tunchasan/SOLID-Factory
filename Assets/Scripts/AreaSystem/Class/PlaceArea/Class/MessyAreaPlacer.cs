@@ -13,7 +13,7 @@ namespace AreaSystem.Class.PlaceArea.Class
             {
                 onComplete?.Invoke(false);
                 
-                Debug.Log($"{element} already added to {name} list.");
+                Debug.LogWarning($"{element} already added to {name} list.");
                 
                 return;
             }

@@ -9,7 +9,7 @@ namespace AreaSystem.Class.PlaceArea.Class
     {
         public override void AnimatePlacing(Transform target, Action<bool> onComplete = null)
         {
-            target.DOMove(transform.position, .5F).OnComplete(()=> onComplete?.Invoke(true));
+            target.DOMove(transform.position, 2F).OnComplete(()=> onComplete?.Invoke(true));
         }
     }
 }

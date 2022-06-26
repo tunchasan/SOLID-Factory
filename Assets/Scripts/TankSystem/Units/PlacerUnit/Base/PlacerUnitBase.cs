@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using BlockSystem;
+using DetectorSystem.Class;
 using PlacerSystem.Base;
 using SourceSystem.Base;
 using StorageSystem.Base;
@@ -55,13 +56,15 @@ namespace TankSystem.Units.PlacerUnit.Base
                 return;
             }
 
-            var placeElements = _storage.Storages
-                .Select(target => target.GetTarget()?.GetComponent<ISource>()?.IsPlaceable())
-                .Where(storable => storable != null).ToList();
+            var placeElements = new List<IPlaceable>();
 
-            // var placeElements = _storage.Storages
-            //     .Select(storeElem => storeElem.GetTarget().GetComponent<ISource>())
-            //     .Where(placeElem => placeElem.IsPlaceable() != null).ToList();
+            foreach (var target in _storage.Storages)
+            {
+                if (target.GetTarget().TryGetPlaceable(out var placeable))
+                {
+                    placeElements.Add(placeable);
+                }
+            }
             
             _placer.PlaceElements(placeElements);
         }

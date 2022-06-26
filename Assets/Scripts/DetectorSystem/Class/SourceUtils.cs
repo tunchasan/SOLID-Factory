@@ -9,32 +9,36 @@ namespace DetectorSystem.Class
 {
     public static class SourceUtils
     {
-        public static IStorable ConvertToStorable(this GameObject target)
+        public static bool TryGetStorable(this GameObject target, out IStorable storable)
         {
-            return target.TryGetComponent(out ISource source) ? 
+            storable = target.TryGetComponent(out ISource source) ? 
                 source.IsStorable(): 
                 target.GetComponent<IStorable>();
+            return storable != null;
         }
         
-        public static IPlaceable ConvertToPlaceable(this GameObject target)
+        public static bool TryGetPlaceable(this GameObject target, out IPlaceable placeable)
         {
-            return target.TryGetComponent(out ISource source) ? 
+            placeable = target.TryGetComponent(out ISource source) ? 
                 source.IsPlaceable(): 
                 target.GetComponent<IPlaceable>();
+            return placeable != null;
         }
         
-        public static ITransportable ConvertToTransportable(this GameObject target)
+        public static bool TryGetTransportable(this GameObject target, out ITransportable transportable)
         {
-            return target.TryGetComponent(out ISource source) ? 
+            transportable = target.TryGetComponent(out ISource source) ? 
                 source.IsTransportable(): 
                 target.GetComponent<ITransportable>();
+            return transportable != null;
         }
         
-        public static IDetectable ConvertToDetectable(this GameObject target)
+        public static bool TryGetDetectable(this GameObject target, out IDetectable detectable)
         {
-            return target.TryGetComponent(out ISource source) ? 
+            detectable = target.TryGetComponent(out ISource source) ? 
                 source.IsDetectable(): 
                 target.GetComponent<IDetectable>();
+            return detectable != null;
         }
     }
 }

@@ -28,7 +28,7 @@ namespace NodeSystem
 
         protected virtual void OnReceiveOutput(INode from, List<GameObject> output)
         {
-            Debug.Log($"Receive {output.Count} outputs from {from}");
+            Debug.Log($"NodesControllerBase :: Receive {output.Count} outputs from {from}");
 
             var nodeIndex = Nodes.IndexOf(from);
 

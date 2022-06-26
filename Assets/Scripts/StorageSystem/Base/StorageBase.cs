@@ -41,7 +41,6 @@ namespace StorageSystem.Base
                 Storages.Add(elem);
                 elem.PossesBy(transform);
                 OnStored?.Invoke(elem);
-                Debug.Log(elem);
             }
         }
         protected virtual bool CanStoreElement(IStorable elem)
@@ -69,7 +68,7 @@ namespace StorageSystem.Base
             
             if (elem == null)
             {
-                Debug.Log($"{elem} : Null element can not be removed in {name}");
+                Debug.LogWarning($"{elem} : Null element can not be removed in {name}");
                 
                 return false;
             }
