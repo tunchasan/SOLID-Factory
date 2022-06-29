@@ -17,9 +17,12 @@ namespace NodeSystem
         public Action<INode, List<GameObject>> OnOutput { get; set; }
         public float Duration { get; protected set; } = .5F;
         
+        private YieldInstruction _waitForSeconds;
+
         public void InitializeNode()
         {
             StartCoroutine(Process());
+            _waitForSeconds = new WaitForSeconds(Duration);
         }
         public IEnumerable<GameObject> Input(IEnumerable<GameObject> elements)
         {
@@ -74,7 +77,7 @@ namespace NodeSystem
                     });
                 }
                 
-                yield return new WaitForSeconds(Duration);
+                yield return _waitForSeconds;
             }
         }
         public void Output(ITransportable output)

@@ -5,22 +5,32 @@ using DetectorSystem.Class;
 using DG.Tweening;
 using PlacerSystem.Base;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace NodeSystem
 {
+    [RequireComponent(typeof(SprayerAreaBase))]
     public class SprayerNode : MonoBehaviour, INode<IPlaceable>
     {
-        [SerializeField] private Transform sprayCenter = null;
-        [SerializeField] private Transform sprayTarget = null;
-        
         public Queue<IPlaceable> Elements { get; protected set; } = new();
         public Action<INode, List<GameObject>> OnOutput { get; set; }
         public float Duration { get; protected set; } = .5F;
         
+        private SprayerAreaBase _area = null;
+        private SprayerAnimationBase _animation = null;
+        private YieldInstruction _waitForSeconds;
+
         public void InitializeNode()
         {
             StartCoroutine(Process());
+            _waitForSeconds = new WaitForSeconds(Duration);
+
+            _area = GetComponent<SprayerAreaBase>();
+            if (_area == null)
+                _area = gameObject.AddComponent<CircleSprayerArea>();
+            
+            _animation = GetComponent<SprayerAnimationBase>();
+            if (_animation == null)
+                _animation = gameObject.AddComponent<SprayerAnimation>();
         }
         public IEnumerable<GameObject> Input(IEnumerable<GameObject> elements)
         {
@@ -48,6 +58,11 @@ namespace NodeSystem
         }
         public IEnumerator Process()
         {
+            Transform targetTransform;
+            Quaternion targetRotation;
+            Vector2 direction;
+            float angle = 0;
+
             while (true)
             {
                 IPlaceable processingElement = null;
@@ -56,34 +71,20 @@ namespace NodeSystem
                 {
                     processingElement = Elements.Dequeue();
 
-                    var targetTransform = processingElement.GetTarget().transform;
-
-                    var randomPoint = Random.insideUnitCircle * 1.5F;
+                    targetTransform = processingElement.GetTarget().transform;
+                    direction = _area.SprayPosition() - transform.position;
+                    angle = Mathf.Atan2(direction.y,direction.x) * Mathf.Rad2Deg;
+                    targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
                     
-                    var sprayPosition = sprayCenter.position + new Vector3(randomPoint.x, randomPoint.y, 0F);
+                     _animation.Animate(targetRotation, Duration, () =>
+                     {
+                         targetTransform.DOMove(_area.SprayPosition(), Duration)
+                             .SetEase(Ease.OutExpo);
 
-                    // REFACTOR - ANIMATION
-                    
-                    Vector3 dir = sprayPosition - transform.position;
-                    float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
-                    var targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-                    sprayTarget.DORotateQuaternion(targetRotation, Duration / 2F).OnComplete(() =>
-                    {
-                        sprayTarget.DOScaleX(.6F, Duration / 2F).OnComplete(() =>
-                        {
-                            sprayTarget.DOScaleX(.5F, Duration / 2F);
-                        });
-                        
-                        targetTransform.DOMove(sprayPosition, .5F).SetEase(Ease.OutExpo);
-
-                        sprayTarget.DOLocalRotate(Vector3.zero, Duration / 2F);
-                    });
-                    
-                    // REFACTOR - ANIMATION
+                     });
                 }
-                
-                yield return new WaitForSeconds(Duration);
+
+                yield return _waitForSeconds;
 
                 if (processingElement != null)
                 {
@@ -93,7 +94,6 @@ namespace NodeSystem
                 }
             }
         }
-
         public void Output(IPlaceable output)
         {
             Debug.Log($"PlaceableAreaNode :: Remained element's count is {Elements.Count}");

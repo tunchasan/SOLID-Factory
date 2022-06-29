@@ -14,9 +14,12 @@ namespace NodeSystem
         public Action<INode, List<GameObject>> OnOutput { get; set; }
         public float Duration { get; protected set; } = .25F;
         
+        private YieldInstruction _waitForSeconds;
+
         public void InitializeNode()
         {
             StartCoroutine(Process());
+            _waitForSeconds = new WaitForSeconds(Duration);
         }
         public IEnumerable<GameObject> Input(IEnumerable<GameObject> elements)
         {
@@ -51,13 +54,9 @@ namespace NodeSystem
                 if (Elements.Count > 0)
                 {
                     processingElement = Elements.Dequeue();
-
-                    // TODO : Process and Output
-                    
-                    // NOTE : The process must last as long as the "duration"!
                 }
                 
-                yield return new WaitForSeconds(Duration);
+                yield return _waitForSeconds;
 
                 if (processingElement != null)
                 {
