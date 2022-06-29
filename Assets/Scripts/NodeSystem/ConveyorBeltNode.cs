@@ -73,18 +73,18 @@ namespace NodeSystem
                     {
                         Debug.Log($"ConveyorBeltNode :: {processingElement} element is processed");
                             
-                        Output(processingElement);
+                        Output(processingElement.GetTarget());
                     });
                 }
                 
                 yield return _waitForSeconds;
             }
         }
-        public void Output(ITransportable output)
+        public void Output(GameObject output)
         {
             Debug.Log($"ConveyorBeltNode :: Remained element's count is {Elements.Count}");
 
-            OnOutput?.Invoke(this, new List<GameObject>{output.GetTarget()});
+            OnOutput?.Invoke(this, new List<GameObject>{output});
         }
     }
 }

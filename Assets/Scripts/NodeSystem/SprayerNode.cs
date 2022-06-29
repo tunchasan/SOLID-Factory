@@ -90,15 +90,15 @@ namespace NodeSystem
                 {
                     Debug.Log($"PlaceableAreaNode :: {processingElement} element is processed");
                     
-                    Output(processingElement);
+                    Output(processingElement.GetTarget());
                 }
             }
         }
-        public void Output(IPlaceable output)
+        public void Output(GameObject output)
         {
             Debug.Log($"PlaceableAreaNode :: Remained element's count is {Elements.Count}");
 
-            OnOutput?.Invoke(this, new List<GameObject>{output.GetTarget()});
+            OnOutput?.Invoke(this, new List<GameObject>{output});
         }
     }
 }

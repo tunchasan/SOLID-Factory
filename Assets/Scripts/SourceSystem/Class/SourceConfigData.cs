@@ -55,5 +55,15 @@ namespace SourceSystem.Class
                 _ => throw new NotImplementedException($"{transportType} is not implemented by {GetType()}")
             };
         }
+
+        public override IProcessable InitializeProcessableBehaviour(GameObject gameObject)
+        {
+            return processableType switch
+            {
+                ProcessableType.CanProcess => new CanProcess(gameObject),
+                ProcessableType.CanNotProcess => new CanNotProcess(),
+                _ => throw new NotImplementedException($"{processableType} is not implemented by {GetType()}")
+            };
+        }
     }
 }

@@ -2,6 +2,7 @@ using ConveyorBeltSystem.Base;
 using DetectorSystem.Base;
 using PlacerSystem.Base;
 using SourceSystem.Base;
+using SourceSystem.Class;
 using StorageSystem.Base;
 using UnityEngine;
 
@@ -39,6 +40,14 @@ namespace DetectorSystem.Class
                 source.IsDetectable(): 
                 target.GetComponent<IDetectable>();
             return detectable != null;
+        }
+        
+        public static bool TryGetProcessable(this GameObject target, out IProcessable processable)
+        {
+            processable = target.TryGetComponent(out ISource source) ? 
+                source.IsProcessable(): 
+                target.GetComponent<IProcessable>();
+            return processable != null;
         }
     }
 }

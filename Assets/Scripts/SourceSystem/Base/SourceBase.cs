@@ -41,5 +41,9 @@ namespace SourceSystem.Base
         {
             return _sourceBehaviour.Transportable as CanTransport;
         }
+        public IProcessable IsProcessable()
+        {
+            return _sourceBehaviour.Processable as CanProcess;
+        }
     }
 } 
