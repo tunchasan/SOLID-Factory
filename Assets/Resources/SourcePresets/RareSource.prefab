@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9201521660251719508}
   - component: {fileID: 3584717340927725129}
+  - component: {fileID: 8069787823367843384}
   m_Layer: 0
-  m_Name: Output
+  m_Name: RareSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,6 +47,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   configData: {fileID: 11400000, guid: 8c1727957827be745a9e25f97df7267d, type: 2}
+--- !u!114 &8069787823367843384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7676769867937141729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0219d013ac274ac5b923f6e2127af153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 7984901944652735822}
 --- !u!1 &8044667338724268986
 GameObject:
   m_ObjectHideFlags: 0

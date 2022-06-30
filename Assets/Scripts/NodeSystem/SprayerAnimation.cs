@@ -10,12 +10,10 @@ namespace NodeSystem
         {
             animationTarget.DORotateQuaternion(animateRotation, duration / 2F).OnComplete(() =>
             {
-                // TODO : Animate with Animator
                 animationTarget.DOScaleX(.6F, duration / 2F).OnComplete(() =>
                 {
                     animationTarget.DOScaleX(.5F, duration / 2F);
                 });
-                /////////////////////////////////
 
                 onSprayFrame?.Invoke();
                 

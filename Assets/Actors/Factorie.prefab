@@ -414,6 +414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3985268531242343478}
   - component: {fileID: 2918231815670068315}
+  - component: {fileID: 1739515051}
   m_Layer: 0
   m_Name: Processor - Node
   m_TagString: Untagged
@@ -449,6 +450,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0106431bbe4de94f98eaf0afaa89618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  product: {fileID: 7676769867937141729, guid: fc6eaac8a317d6d46a23d72f76a4f5ea, type: 3}
+--- !u!114 &1739515051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956902816547705450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f943e247c9944a1fb520bf2ea8b07e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationTarget: {fileID: 3985268531242343478}
+  easingType: 21
 --- !u!1 &2070576396744212734
 GameObject:
   m_ObjectHideFlags: 0

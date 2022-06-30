@@ -8,7 +8,6 @@ using UnityEngine;
 
 namespace NodeSystem
 {
-    [RequireComponent(typeof(SprayerAreaBase))]
     public class SprayerNode : MonoBehaviour, INode<IPlaceable>
     {
         public Queue<IPlaceable> Elements { get; protected set; } = new();

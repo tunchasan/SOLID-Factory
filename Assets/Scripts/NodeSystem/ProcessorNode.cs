@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DetectorSystem.Class;
-using DG.Tweening;
 using SourceSystem.Class;
 using Unity.Mathematics;
 using UnityEngine;
@@ -11,18 +10,24 @@ namespace NodeSystem
 {
     public class ProcessorNode : MonoBehaviour, INode<IProcessable>
     {
-        [SerializeField] private GameObject outputPrefab = null;
+        [SerializeField] private GameObject product = null;
         
         public Queue<IProcessable> Elements { get; protected set; } = new();
         public Action<INode, List<GameObject>> OnOutput { get; set; }
         public float Duration { get; protected set; } = .5F;
         
+        private ProcessorAnimationBase _processorAnimation;
         private YieldInstruction _waitForSeconds;
         
         public void InitializeNode()
         {
             StartCoroutine(Process());
             _waitForSeconds = new WaitForSeconds(Duration);
+
+            _processorAnimation = GetComponent<ProcessorAnimationBase>();
+            if (_processorAnimation == null)
+                _processorAnimation = gameObject.AddComponent<ProcessorAnimation>();
+
         }
         
         public IEnumerable<GameObject> Input(IEnumerable<GameObject> elements)
@@ -60,16 +65,12 @@ namespace NodeSystem
                 {
                     var processingElement = Elements.Dequeue();
 
-                    output = Instantiate(outputPrefab, transform.position, 
-                        quaternion.identity).gameObject;
-                    
                     Destroy(processingElement.GetTarget());
 
-                    transform.DOScale(Vector3.one * 1.2F, Duration / 2F).OnComplete(() =>
-                    {
-                        transform.DOScale(Vector3.one, Duration / 2F).SetEase(Ease.OutExpo);
-
-                    }).SetEase(Ease.OutExpo);
+                    output = Instantiate(product, transform.position, 
+                        quaternion.identity).gameObject;
+                    
+                    _processorAnimation.Animate(Duration);
                 }
                 
                 yield return _waitForSeconds;
