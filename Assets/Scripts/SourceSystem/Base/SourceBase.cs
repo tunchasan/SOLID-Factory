@@ -13,6 +13,7 @@ namespace SourceSystem.Base
         
         private SourceBehaviourBase _sourceBehaviour = null;
         private SourceVisualBase _sourceVisual = null;
+        public SourceConfigDataBase ConfigData => configData;
 
         private void Awake()
         {
@@ -22,6 +23,12 @@ namespace SourceSystem.Base
         {
             _sourceBehaviour = new SourceBehaviour();
             _sourceVisual = GetComponent<SourceVisual>();
+            _sourceBehaviour.SetBehaviour(configData, gameObject);
+            _sourceVisual.SetVisual(configData.Visual);
+        }
+        public virtual void UpdateBehaviour(SourceConfigDataBase config)
+        {
+            configData = config;
             _sourceBehaviour.SetBehaviour(configData, gameObject);
             _sourceVisual.SetVisual(configData.Visual);
         }

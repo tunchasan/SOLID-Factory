@@ -8,6 +8,7 @@ namespace SourceSystem.Base
 {
     public interface ISource
     {
+        void UpdateBehaviour(SourceConfigDataBase config);
         IStorable IsStorable();
         IPlaceable IsPlaceable();
         IDetectable IsDetectable();
