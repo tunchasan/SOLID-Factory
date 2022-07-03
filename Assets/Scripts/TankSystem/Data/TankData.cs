@@ -7,7 +7,11 @@ namespace TankSystem.Data
     [System.Serializable]
     public class TankData : ScriptableObject
     {
+        [Header("General")]
         public string name = "";
         public TankType type = TankType.Stable;
+        
+        [Header("Movement")]
+        public float movementSpeed = 5F;
     }
 }

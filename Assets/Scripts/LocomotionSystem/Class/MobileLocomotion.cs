@@ -10,6 +10,8 @@ namespace LocomotionSystem.Class
     {
         protected override InputController Input { get; set; }
 
+        [Inject] protected Camera Camera { get; set; } = null;
+
         [Inject]
         public override void Initialize(InputController input)
         {
@@ -28,6 +30,11 @@ namespace LocomotionSystem.Class
 
         private Rigidbody2D _rigidbody2D = null;
         public bool ShouldMove { get; private set; }
+        public float MovementSpeed { get; private set; } = 1F;
+        public void SetMovementSpeed(float speed)
+        {
+            MovementSpeed = speed;
+        }
         public bool CanMove()
         {
             return ShouldMove && Input.MovementInput.magnitude > 0;
@@ -40,7 +47,7 @@ namespace LocomotionSystem.Class
         {
             if (CanMove())
             {
-                _rigidbody2D.velocity = Input.MovementInput * (100F * Time.fixedDeltaTime);
+                _rigidbody2D.velocity = Input.MovementInput * (100F * MovementSpeed * Time.fixedDeltaTime);
                 OnLocomotion?.Invoke();
             }
             else
@@ -71,8 +78,10 @@ namespace LocomotionSystem.Class
         {
             if (CanRotate())
             {
-                var angle = Mathf.Atan2(Input.RotationInput.y, Input.RotationInput.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                var difference = Camera.ScreenToWorldPoint(Input.RotationInput) - transform.position;
+                difference.Normalize();
+                var rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0f, 0f, rotationZ - 0F);
             }
         }
         public void StopRotation()

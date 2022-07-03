@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DetectorSystem.Base
 {
-    [RequireComponent(typeof(CircleCollider2D), 
+    [RequireComponent(typeof(Collider2D), 
         typeof(Rigidbody2D))]
     public abstract class DetectorBase<T>: MonoBehaviour
     where T: IDetectable

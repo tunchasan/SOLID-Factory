@@ -16,6 +16,7 @@ namespace TankSystem.Class
         {
             base.Initialize(data);
             _locomotion = GetComponent<MobileLocomotion>();
+            ((MobileLocomotion) _locomotion).SetMovementSpeed(data.movementSpeed);
             _detector = GetComponentInChildren<DetectorBase<IDetectable>>();
         }
     }

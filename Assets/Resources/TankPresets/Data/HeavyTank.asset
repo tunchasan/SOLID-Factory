@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Heavy Tank
   type: 2
+  movementSpeed: 1

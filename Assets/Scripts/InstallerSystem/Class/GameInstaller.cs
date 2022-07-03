@@ -2,6 +2,7 @@ using InputControllerSystem.Settings;
 using PlayerSystem.Data;
 using TankSystem.Class;
 using TankSystem.Data;
+using UnityEngine;
 using Zenject;
 
 namespace InstallerSystem.Class
@@ -12,7 +13,7 @@ namespace InstallerSystem.Class
         {
             var inputController = Container.InstantiatePrefabResource("SettingsPresets/InputSettings").GetComponent<InputControllerSettingsBase>();
             Container.BindInstance(inputController.Controller).AsSingle();
-            
+            Container.BindInstance(Camera.main).AsSingle();
             Container.Bind<TankData>().FromScriptableObjectResource("TankPresets/Data/StableTank").WhenInjectedInto<StableTank>();
             Container.Bind<TankData>().FromScriptableObjectResource("TankPresets/Data/MobileTank").WhenInjectedInto<MobileTank>();
             Container.Bind<TankData>().FromScriptableObjectResource("TankPresets/Data/HeavyTank").WhenInjectedInto<HeavyTank>();

@@ -9,6 +9,8 @@ namespace LocomotionSystem.Class
     {
         protected override InputController Input { get; set; }
 
+        [Inject] protected Camera Camera { get; set; } = null;
+
         [Inject]
         public override void Initialize(InputController input)
         {
@@ -25,7 +27,7 @@ namespace LocomotionSystem.Class
         public bool ShouldRotate { get; private set; }
         public bool CanRotate()
         {
-            return ShouldRotate && Input.MovementInput.magnitude > 0;
+            return ShouldRotate && Input.RotationInput.magnitude > 0;
         }
         public void StartRotation()
         {
@@ -35,8 +37,10 @@ namespace LocomotionSystem.Class
         {
             if (CanRotate())
             {
-                var angle = Mathf.Atan2(Input.RotationInput.y, Input.RotationInput.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                var difference = Camera.ScreenToWorldPoint(Input.RotationInput) - transform.position;
+                difference.Normalize();
+                var rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0f, 0f, rotationZ - 0F);
             }
         }
         public void StopRotation()
