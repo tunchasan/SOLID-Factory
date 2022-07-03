@@ -4,6 +4,7 @@ using AreaSystem.Class.PlaceArea.Base;
 using BlockSystem;
 using DetectorSystem.Base;
 using DetectorSystem.Class;
+using SourceSystem.Class.Placeable.Base;
 
 namespace PlacerSystem.Base
 {

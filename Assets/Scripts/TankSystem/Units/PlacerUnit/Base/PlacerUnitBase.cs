@@ -4,6 +4,8 @@ using BlockSystem;
 using DetectorSystem.Class;
 using PlacerSystem.Base;
 using SourceSystem.Base;
+using SourceSystem.Class.Placeable.Base;
+using SourceSystem.Class.Storable.Base;
 using StorageSystem.Base;
 using UnityEngine;
 

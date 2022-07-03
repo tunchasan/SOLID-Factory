@@ -1,6 +1,7 @@
 using DetectorSystem.Base;
 using LocomotionSystem.Base;
 using LocomotionSystem.Class;
+using SourceSystem.Class.Detectable.Base;
 using TankSystem.Base;
 using TankSystem.Data;
 

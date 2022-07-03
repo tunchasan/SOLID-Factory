@@ -1,7 +1,15 @@
-using ConveyorBeltSystem.Base;
 using DetectorSystem.Base;
 using PlacerSystem.Base;
 using SourceSystem.Class;
+using SourceSystem.Class.Detectable.Base;
+using SourceSystem.Class.Detectable.Class;
+using SourceSystem.Class.Placeable.Base;
+using SourceSystem.Class.Placeable.Class;
+using SourceSystem.Class.Processable.Base;
+using SourceSystem.Class.Processable.Class;
+using SourceSystem.Class.Storable.Base;
+using SourceSystem.Class.Transportable.Base;
+using SourceSystem.Class.Transportable.Class;
 using StorageSystem.Base;
 using UnityEngine;
 

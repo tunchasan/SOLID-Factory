@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using PlacerSystem.Base;
+using SourceSystem.Class.Placeable.Base;
 using UnityEngine;
 
 namespace AreaSystem.Class.PlaceArea.Base

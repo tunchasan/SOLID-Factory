@@ -1,4 +1,5 @@
 using DetectorSystem.Base;
+using SourceSystem.Class.Storable.Base;
 using StorageSystem.Base;
 using UnityEngine;
 

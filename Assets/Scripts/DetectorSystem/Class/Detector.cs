@@ -1,5 +1,6 @@
 using DetectorSystem.Base;
 using SourceSystem.Base;
+using SourceSystem.Class.Detectable.Base;
 using UnityEngine;
 
 namespace DetectorSystem.Class

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using AreaSystem.Base;
 using PlacerSystem.Base;
+using SourceSystem.Class.Placeable.Base;
 using UnityEngine;
 using Zenject;
 

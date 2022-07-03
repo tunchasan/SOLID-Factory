@@ -4,6 +4,7 @@ using BlockSystem;
 using DetectorSystem.Base;
 using DetectorSystem.Class;
 using SourceSystem.Class;
+using SourceSystem.Class.Storable.Base;
 using StorageSystem.Utilities;
 using UnityEngine;
 

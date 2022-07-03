@@ -2,17 +2,131 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4d6c6a3-25a5-4d09-b7cb-4150a8f4180e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ProcessorAnimation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ProcessorAnimation.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ProcessorAnimationBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ProcessorAnimationBase.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ConveyorBelt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ConveyorBelt/Class.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Nodes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Nodes/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Nodes/Class.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Nodes/Class/CircularLinkedNodesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Nodes/Class/CircularLinkedNodesController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Nodes/Class/SinglyLinkedNodesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/PlaceableArea.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/PlaceableArea/Class.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Processor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Processor/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Processor/Class.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Sprayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Sprayer/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Sprayer/Class.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Sprayer/Class/SprayerNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Detectable.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Detectable/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Detectable/Class.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Placeable.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Placeable/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Placeable/Class.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Processable.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Processable/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Processable/Class.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable/Class.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Transportable.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Transportable/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Transportable/Class.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Factorio-Clone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Factorio-Clone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Actors/Factorie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Actors/Factorie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Output.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Output.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Base/AreaPlacerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Base/AreaPlacerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Base/IPlaceableArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Base/IPlaceableArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Base/PlaceableAreaBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Base/PlaceableAreaBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Class/MessyAreaPlacer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Class/MessyAreaPlacer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Class/OrganisedAreaPlacer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Class/OrganisedAreaPlacer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConveyorBeltSystem.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConveyorBeltSystem/Base/ITransportable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Transportable/Base/ITransportable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConveyorBeltSystem/Base/ITransportable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Transportable/Base/ITransportable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Base/DetectorBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Base/DetectorBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Base/IDetectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Detectable/Base/IDetectable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Base/IDetectable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Detectable/Base/IDetectable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Class/Detector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Class/Detector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Class/SourceUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Class/SourceUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Class/StorableDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Class/StorableDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/CircleSprayerArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Sprayer/Class/CircleSprayerArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/CircleSprayerArea.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Sprayer/Class/CircleSprayerArea.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ConveyorBeltNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ConveyorBelt/Class/ConveyorBeltNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ConveyorBeltNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ConveyorBelt/Class/ConveyorBeltNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/INode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Nodes/Base/INode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/INode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Nodes/Base/INode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/NodesController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/NodesController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Nodes/Class/SinglyLinkedNodesController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/NodesControllerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Nodes/Base/NodesControllerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/NodesControllerBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Nodes/Base/NodesControllerBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/PlaceableAreaNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/PlaceableArea/Class/PlaceableAreaNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/PlaceableAreaNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/PlaceableArea/Class/PlaceableAreaNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ProcessorAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Processor/Class/ProcessorAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ProcessorAnimation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Processor/Class/ProcessorAnimation.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ProcessorAnimationBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Processor/Base/ProcessorAnimationBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ProcessorAnimationBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Processor/Base/ProcessorAnimationBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ProcessorNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Processor/Class/ProcessorNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ProcessorNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Processor/Class/ProcessorNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Sprayer/Class/SprayerAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerAnimation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Sprayer/Class/SprayerAnimation.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerAnimationBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Sprayer/Base/SprayerAnimationBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerAnimationBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Sprayer/Base/SprayerAnimationBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerAreaBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Sprayer/Base/SprayerAreaBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerAreaBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Sprayer/Base/SprayerAreaBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeSystem/Sprayer/Class/SprayerNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlacerSystem/Base/IPlaceable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Placeable/Base/IPlaceable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlacerSystem/Base/IPlaceable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Placeable/Base/IPlaceable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlacerSystem/Base/PlacerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlacerSystem/Base/PlacerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/ISource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/ISource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/Old.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/Old/InteractableSourceBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/Old/InteractableSourceBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/SourceBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/SourceBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/SourceBehaviourBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/SourceBehaviourBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/SourceConfigDataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/SourceConfigDataBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanDetect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Detectable/Class/CanDetect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanDetect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Detectable/Class/CanDetect.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanNotDetect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Detectable/Class/CanNotDetect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanNotDetect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Detectable/Class/CanNotDetect.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanNotPlace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Placeable/Class/CanNotPlace.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanNotPlace.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Placeable/Class/CanNotPlace.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanNotProcess.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Processable/Class/CanNotProcess.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanNotProcess.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Processable/Class/CanNotProcess.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanNotStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable/Class/CanNotStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanNotStore.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable/Class/CanNotStore.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanNotTransport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Transportable/Class/CanNotTransport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanNotTransport.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Transportable/Class/CanNotTransport.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanPlace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Placeable/Class/CanPlace.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanPlace.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Placeable/Class/CanPlace.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanProcess.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Processable/Class/CanProcess.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanProcess.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Processable/Class/CanProcess.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable/Base/CanStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanStore.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable/Base/CanStore.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanStoreMultiple.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable/Class/CanStoreMultiple.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanStoreMultiple.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable/Class/CanStoreMultiple.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanStoreSingle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable/Class/CanStoreSingle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanStoreSingle.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable/Class/CanStoreSingle.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanTransport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Transportable/Class/CanTransport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanTransport.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Transportable/Class/CanTransport.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/IProcessable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Processable/Base/IProcessable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/IProcessable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Processable/Base/IProcessable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Old.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Old/MultipleInteractableSourceBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Old/MultipleInteractableSourceBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Old/NonInteractableSource.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Old/NonInteractableSource.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Old/SingleInteractableSourceBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Old/SingleInteractableSourceBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/SourceBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/SourceBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/SourceConfigData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/SourceConfigData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StorageSystem/Base/IStorable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable/Base/IStorable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StorageSystem/Base/IStorable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable/Base/IStorable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StorageSystem/Base/StorageBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StorageSystem/Base/StorageBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TankSystem/Class/MobileTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TankSystem/Class/MobileTank.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TankSystem/Class/StableTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TankSystem/Class/StableTank.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TankSystem/Units/PlacerUnit/Base/PlacerUnitBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TankSystem/Units/PlacerUnit/Base/PlacerUnitBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
@@ -32,8 +146,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/08/7b00af24/YieldInstruction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TankSystem/Class/StableTank.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InstallerSystem/Class/GameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NodeSystem/NodesControllerBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NodeSystem/Nodes/Base/NodesControllerBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C4094EC9-F20D-4E6C-B519-37772BA9FB62/66/43698de3/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/ae/0c6b047f/Random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TankSystem/Data/TankData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/e9/5ed7f00a/IEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerSystem/Base/PlayerBase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -50,9 +165,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Old/SingleInteractableSourceBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Class/PlaceableAreaDetector.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Base/DetectorBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanPlace.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlacerSystem/Base/PlacerBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanDetect.cs" />
@@ -80,17 +192,13 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Class/MessyAreaPlacer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StorageSystem/Base/StorageBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Class/Detector.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/NodeSystem/NodesControllerBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/NodeSystem/CircleSprayerArea.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerAnimationBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerAreaBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/ISource.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Enums/ProcessableType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/SourceConfigDataBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/IProcessable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanStore.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/SourceBehaviourBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/SourceBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/CanNotProcess.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/SourceConfigData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/SourceBehaviour.cs" />
@@ -99,8 +207,15 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ConveyorBeltNode.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/NodeSystem/PlaceableAreaNode.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerAnimation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/ISource.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/SourceBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/NodeSystem/ProcessorNode.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SprayerNode.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/NodeSystem/CircleSprayerArea.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/NodeSystem/NodesControllerBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/NodeSystem/SinglyLinkedNodesController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/NodeSystem/CircularLinkedNodesController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SourceSystem/Class/Storable/Class/CanNotStore.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -172,6 +287,8 @@
       <workItem from="1656356337716" duration="2845000" />
       <workItem from="1656519814530" duration="11137000" />
       <workItem from="1656624259448" duration="1351000" />
+      <workItem from="1656627455607" duration="1063000" />
+      <workItem from="1656845418800" duration="2534000" />
     </task>
     <servers />
   </component>
