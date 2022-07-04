@@ -21,6 +21,17 @@ namespace Factorio.Simulation.Managers
         {
             _waitSeconds = new WaitForSeconds(ProcessDuration);
         }
+        private void Start()
+        {
+            InitializeSimulationScenes();
+        }
+        private void InitializeSimulationScenes()
+        {
+            foreach (var scene in scenes)
+            {
+                SceneManager.LoadSceneAsync(scene.scene, LoadSceneMode.Additive);
+            }
+        }
         public void SimulateScene(int sceneIndex)
         {
             if(_isProcessing) return;
