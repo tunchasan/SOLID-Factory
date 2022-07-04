@@ -1,0 +1,17 @@
+{
+    "name": "Factorio-Simulation",
+    "rootNamespace": "Factorio",
+    "references": [
+        "GUID:d43086aec4bf5a341b28f5c3194f74a7",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
