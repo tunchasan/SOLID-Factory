@@ -3,7 +3,8 @@
     "rootNamespace": "Factorio",
     "references": [
         "GUID:d43086aec4bf5a341b28f5c3194f74a7",
-        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -12,8 +12,6 @@ namespace Factorio.Core.InputSystem.Class
         
         protected override void ProcessInput()
         {
-            var mainCamera = Camera.main;
-            if(mainCamera == null) return;
             Direction = Input.mousePosition;
         }
     }

@@ -47,7 +47,9 @@ namespace Factorio.Core.LocomotionSystem.Class
         {
             if (CanMove())
             {
-                _rigidbody2D.velocity = Input.MovementInput * (100F * MovementSpeed * Time.fixedDeltaTime);
+                var currentVelocity = _rigidbody2D.velocity;
+                var targetVelocity = Input.MovementInput * (MovementSpeed * 2.5F);
+                _rigidbody2D.velocity = Vector3.Lerp(currentVelocity, targetVelocity, Time.fixedDeltaTime * 5F);
                 OnLocomotion?.Invoke();
             }
             else
