@@ -1,13 +1,9 @@
-using DetectorSystem.Base;
-using PlacerSystem.Base;
 using SourceSystem.Base;
-using SourceSystem.Class;
 using SourceSystem.Class.Detectable.Base;
 using SourceSystem.Class.Placeable.Base;
 using SourceSystem.Class.Processable.Base;
 using SourceSystem.Class.Storable.Base;
 using SourceSystem.Class.Transportable.Base;
-using StorageSystem.Base;
 using UnityEngine;
 
 namespace DetectorSystem.Class

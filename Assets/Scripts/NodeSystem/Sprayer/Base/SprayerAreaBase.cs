@@ -14,6 +14,8 @@ namespace NodeSystem.Sprayer.Base
 
         private void OnValidate()
         {
+            if(center == null) return;
+            
             center.localScale = (radius * 1.3333F) * Vector3.one;
         }
     }
