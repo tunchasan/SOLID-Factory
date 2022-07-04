@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4d6c6a3-25a5-4d09-b7cb-4150a8f4180e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Simulation/Managers/SimulationSceneData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Simulation/Managers/SimulationSceneData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Simulation/Managers/SimulationUIElement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Simulation/Managers/SimulationUIElement.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Factorio-Clone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Factorio-Clone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TankPresets/Heavy Tank.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TankPresets/Heavy Tank.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Base/DetectorBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Base/DetectorBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputSystem/Class/MouseInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputSystem/Class/MouseInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InstallerSystem/Class/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InstallerSystem/Class/GameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LocomotionSystem/Base/IMovable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LocomotionSystem/Base/IMovable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LocomotionSystem/Class/MobileLocomotion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LocomotionSystem/Class/MobileLocomotion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LocomotionSystem/Class/StableLocomotion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LocomotionSystem/Class/StableLocomotion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TankSystem/Class/MobileTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TankSystem/Class/MobileTank.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TankSystem/Data/TankData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TankSystem/Data/TankData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Simulation/Simulation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Simulation/Simulation.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Simulation/Managers/SimulationSceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Simulation/Managers/SimulationSceneManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,33 +19,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerSystem/Class/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/c3/0d4ef720/Scene.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/9e/0e0d1f22/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/08/7b00af24/YieldInstruction.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TankSystem/Class/StableTank.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InstallerSystem/Class/GameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NodeSystem/Nodes/Base/NodesControllerBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/c6/aff12d7e/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C4094EC9-F20D-4E6C-B519-37772BA9FB62/66/43698de3/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/ae/0c6b047f/Random.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TankSystem/Data/TankData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/e9/5ed7f00a/IEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerSystem/Base/PlayerBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DetectorSystem/Class/Detector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/7d/6aa58ae8/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputSystem/Base/InputBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/31/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/76/1b7be91c/WaitForSeconds.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SourceSystem/Base/SourceBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputControllerSystem/Gamepad/GamepadController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Simulation/Managers/SimulationSceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/cb/63727389/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/84/5dbd3c51/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/8b/55d77b4c/Transform.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Base/AreaPlacerBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Base/IPlaceableArea.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Base/PlaceableAreaBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AreaSystem/Class/PlaceArea/Class/PlaceableArea.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/InterfaceWrapper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/InterfaceWrapperDrawer.cs" />
@@ -97,6 +84,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LocomotionSystem/Base/IMovable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TankSystem/Class/MobileTank.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LocomotionSystem/Class/MobileLocomotion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Simulation/Managers/SimulationSceneData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Simulation/Managers/SimulationSceneManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Simulation/Managers/SimulationUIElement.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
