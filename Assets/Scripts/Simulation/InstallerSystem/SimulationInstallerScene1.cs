@@ -16,7 +16,6 @@ namespace Factorio.Simulation.InstallerSystem
             Container.BindInstance(Camera.main).AsSingle();
             Container.BindInstance(simulationInputController).AsSingle();
             Container.Bind<TankData>().FromScriptableObjectResource("TankPresets/Data/StableTank").WhenInjectedInto<StableTank>();
-            Container.Bind<TankData>().FromScriptableObjectResource("TankPresets/Data/MobileTank").WhenInjectedInto<MobileTank>();
             
             var playerAssetData = Container.InstantiateScriptableObjectResource<PlayerAssetData>("PlayerPresets/PlayerAsset");
             Container.Bind<PlayerAssetData>().FromInstance(playerAssetData);

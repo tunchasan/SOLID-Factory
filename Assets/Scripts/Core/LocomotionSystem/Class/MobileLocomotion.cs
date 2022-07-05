@@ -20,7 +20,7 @@ namespace Factorio.Core.LocomotionSystem.Class
             StartMovement();
             StartRotation();
         }
-        private void FixedUpdate()
+        protected virtual void FixedUpdate()
         {
             ProcessMovement();
             ProcessRotation();
@@ -43,7 +43,7 @@ namespace Factorio.Core.LocomotionSystem.Class
         {
             ShouldMove = true;
         }
-        public void ProcessMovement()
+        public virtual void ProcessMovement()
         {
             if (CanMove())
             {
