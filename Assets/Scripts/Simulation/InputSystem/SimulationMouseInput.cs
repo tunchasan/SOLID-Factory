@@ -8,6 +8,7 @@ namespace Factorio.Simulation.InputSystem
 {
     public class SimulationMouseInput : InputBase
     {
+        [SerializeField] private bool constantInput = true;
         [SerializeField] private float pathDuration = 15F;
         [SerializeField] private Transform simulationTarget = null;
         [SerializeField] private List<Transform> simulationPath = new();
@@ -34,7 +35,14 @@ namespace Factorio.Simulation.InputSystem
             {
                 Direction = _camera.WorldToScreenPoint(simulationTarget.position);
                 
-            }).SetLoops(-1).SetEase(Ease.Linear);
+            }).SetLoops(constantInput ? -1 : 0).SetEase(Ease.Linear).OnComplete(() =>
+            {
+                if (!constantInput)
+                {
+                    simulationTarget.gameObject.SetActive(false);
+                    simulationTarget.position = Vector3.zero;
+                }
+            });
         }
     }
 }

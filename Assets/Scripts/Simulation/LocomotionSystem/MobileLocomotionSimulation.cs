@@ -7,11 +7,14 @@ namespace Factorio.Simulation.LocomotionSystem
 {
     public class MobileLocomotionSimulation : MobileLocomotion
     {
-        private float _speedMultiplier = 1F;
+        [SerializeField] private bool randomSpeed = true;
+        
+        private float _speedMultiplier = 1.25F;
 
         public override void Initialize(InputController input)
         {
             base.Initialize(input);
+            if(!randomSpeed) return;
             _speedMultiplier = Random.Range(.25F, 2.5F);
         }
         

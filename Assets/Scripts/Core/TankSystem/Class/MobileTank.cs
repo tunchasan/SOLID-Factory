@@ -9,15 +9,15 @@ namespace Factorio.Core.TankSystem.Class
 {
     public class MobileTank : TankBase
     {
-        private LocomotionBase _locomotion = null;
-        private DetectorBase<IDetectable> _detector = null;
+        protected LocomotionBase Locomotion = null;
+        protected DetectorBase<IDetectable> Detector = null;
         
         public override void Initialize(TankData data)
         {
             base.Initialize(data);
-            _locomotion = GetComponent<MobileLocomotion>();
-            ((MobileLocomotion) _locomotion).SetMovementSpeed(data.movementSpeed);
-            _detector = GetComponentInChildren<DetectorBase<IDetectable>>();
+            Locomotion = GetComponent<MobileLocomotion>();
+            ((MobileLocomotion) Locomotion).SetMovementSpeed(data.movementSpeed);
+            Detector = GetComponentInChildren<DetectorBase<IDetectable>>();
         }
     }
 }

@@ -292,10 +292,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6905221207282572602}
-  - component: {fileID: 4492060375140582238}
+  - component: {fileID: 8241981508069735409}
   - component: {fileID: 4096567766738950591}
   - component: {fileID: 255972805}
-  - component: {fileID: 2817439145000097732}
+  - component: {fileID: 562469086195646754}
   m_Layer: 0
   m_Name: SimulationHeavyTank
   m_TagString: Untagged
@@ -320,7 +320,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4492060375140582238
+--- !u!114 &8241981508069735409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6905221207282572599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ba285638d74b954582a0ad83551dc15, type: 3}
+  m_Script: {fileID: 11500000, guid: b0717df26dc640d190a8dc2dab8446f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &4096567766738950591
@@ -369,7 +369,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.75
---- !u!114 &2817439145000097732
+--- !u!114 &562469086195646754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -378,7 +378,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6905221207282572599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c63eddfe59944bd3aa873a79be6b1cbe, type: 3}
+  m_Script: {fileID: 11500000, guid: 18f045c7ec8c9664a8738200173a9b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6905221207439133858

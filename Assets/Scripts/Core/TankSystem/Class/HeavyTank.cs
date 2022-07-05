@@ -8,37 +8,37 @@ namespace Factorio.Core.TankSystem.Class
 {
     public class HeavyTank : TankBase
     {
-        private LocomotionBase _locomotion = null;
-        private PlacerUnitBase _placerUnit = null;
+        protected LocomotionBase Locomotion = null;
+        protected PlacerUnitBase PlacerUnit = null;
         
         #region Initializations
         public override void Initialize(TankData data)
         {
             base.Initialize(data);
-            _locomotion = GetComponent<MobileLocomotion>();
-            _placerUnit = GetComponentInChildren<PlacerUnitBase>();
-            _placerUnit.Initialize(false);
+            Locomotion = GetComponent<MobileLocomotion>();
+            PlacerUnit = GetComponentInChildren<PlacerUnitBase>();
+            PlacerUnit.Initialize(false);
 
-            _locomotion.OnLocomotion += OnLocomotion;
-            _locomotion.OnCancelledLocomotion += OnCancelledLocomotion;
+            Locomotion.OnLocomotion += OnLocomotion;
+            Locomotion.OnCancelledLocomotion += OnCancelledLocomotion;
         }
 
         protected virtual void OnDisable()
         {
-            _locomotion.OnLocomotion -= OnLocomotion;
-            _locomotion.OnCancelledLocomotion -= OnCancelledLocomotion;
+            Locomotion.OnLocomotion -= OnLocomotion;
+            Locomotion.OnCancelledLocomotion -= OnCancelledLocomotion;
         }
 
         #endregion
 
         protected virtual void OnLocomotion()
         {
-            _placerUnit.Block();
+            PlacerUnit.Block();
         }
 
         protected virtual void OnCancelledLocomotion()
         {
-            _placerUnit.UnBlock();
+            PlacerUnit.UnBlock();
         }
     }
 }

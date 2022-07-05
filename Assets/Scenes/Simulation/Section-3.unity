@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLoop: 1
-  simulationIndex: 2
+  simulationIndex: 3
   simulationDuration: 12
 --- !u!1001 &403004446
 PrefabInstance:
