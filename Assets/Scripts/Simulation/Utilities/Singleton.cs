@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _Main.Scripts.Utilities
+namespace Factorio.Simulation.Utilities
 {
     public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
