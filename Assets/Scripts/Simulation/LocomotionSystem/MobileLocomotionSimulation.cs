@@ -18,6 +18,11 @@ namespace Factorio.Simulation.LocomotionSystem
             _speedMultiplier = Random.Range(.25F, 2.5F);
         }
         
+        public override bool CanMove()
+        {
+            return ShouldMove && Input.MovementInput.magnitude >= 1F;
+        }
+        
         #region Movement
         public override void ProcessMovement()
         {

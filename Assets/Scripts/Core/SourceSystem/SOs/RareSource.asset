@@ -16,5 +16,5 @@ MonoBehaviour:
   placeType: 0
   storeType: 2
   transportType: 0
-  processableType: 1
+  processableType: 0
   visual: {fileID: -9177418277584700315, guid: 31e26fdea85010e4b8674ed3af520595, type: 3}

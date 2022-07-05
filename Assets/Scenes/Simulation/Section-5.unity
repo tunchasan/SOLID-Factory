@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLoop: 0
   simulationIndex: 5
-  simulationDuration: 15
+  simulationDuration: 14
 --- !u!1001 &34579048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2980,8 +2980,8 @@ Transform:
   - {fileID: 970967250}
   - {fileID: 1537986419}
   - {fileID: 1526043283}
-  - {fileID: 1895432705}
   - {fileID: 1698753245}
+  - {fileID: 1895432705}
   - {fileID: 273818024}
   - {fileID: 1861782455}
   - {fileID: 540455744}

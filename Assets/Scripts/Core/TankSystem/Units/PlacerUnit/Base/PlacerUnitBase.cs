@@ -77,7 +77,9 @@ namespace Factorio.Core.TankSystem.Units.PlacerUnit.Base
                 return;
             }
 
-            _storage.RemoveElement(placedElement.GetTarget()?.GetComponent<IStorable>());
+            var target = placedElement.GetTarget();
+            if (target.TryGetStorable(out var storable))
+                _storage.RemoveElement(storable);
         }
         protected virtual void OnStored(IStorable storedElement)
         {

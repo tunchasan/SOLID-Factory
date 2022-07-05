@@ -35,7 +35,7 @@ namespace Factorio.Core.LocomotionSystem.Class
         {
             MovementSpeed = speed;
         }
-        public bool CanMove()
+        public virtual bool CanMove()
         {
             return ShouldMove && Input.MovementInput.magnitude > 0;
         }
