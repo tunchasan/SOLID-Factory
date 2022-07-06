@@ -1,3 +1,4 @@
+using System.Collections;
 using Factorio.Core.AreaSystem.Class.PlaceArea.Base;
 using Factorio.Core.DetectorSystem.Base;
 using UnityEngine;
@@ -11,23 +12,28 @@ namespace Factorio.Core.DetectorSystem.Class
         {
             if (col.TryGetComponent(out IPlaceableArea placeableArea))
             {
+                BroadcastMessage = StartCoroutine(BroadcastDetectionState());
                 OnDetectionSomething?.Invoke(placeableArea);
                 DetectionState = placeableArea;
             }
         }
-        protected override void OnTriggerStay2D(Collider2D other)
+        
+        protected override IEnumerator BroadcastDetectionState()
         {
-            if (other.TryGetComponent(out IPlaceableArea placeableArea))
+            while (true)
             {
-                OnDetectionSomething?.Invoke(placeableArea);
-                DetectionState = placeableArea;
+                yield return new WaitForSeconds(.25F);
+                
+                OnDetectionSomething?.Invoke(DetectionState);
             }
         }
+        
         protected override void OnTriggerExit2D(Collider2D col)
         {
             if (col.TryGetComponent(out IPlaceableArea placeableArea))
             {
                 DetectionState = null;
+                StopCoroutine(BroadcastMessage);
             }
         }
     }

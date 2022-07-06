@@ -17,6 +17,13 @@ namespace Factorio.Core.SourceSystem.Class.Storable.Class
                 Status = false;
                 
                 Target.transform.SetParent(instigator);
+
+                // TODO : Refactor
+                
+                if (Target.TryGetComponent(out Collider2D collider))
+                {
+                    collider.enabled = false;
+                }
             }
         }
     }

@@ -19,6 +19,13 @@ namespace Factorio.Core.SourceSystem.Class.Placeable.Class
         public void UnPossesBy()
         {
             _target.transform.SetParent(null);
+
+            // TODO : Refactor
+            
+            if (_target.TryGetComponent(out Collider2D collider))
+            {
+                //collider.enabled = true;
+            }
         }
     }
 }

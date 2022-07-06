@@ -23,6 +23,8 @@ namespace Factorio.Simulation.Managers
         }
         private void Start()
         {
+            Debug.unityLogger.logEnabled = false;
+
             InitializeSimulationScenes();
         }
         private void InitializeSimulationScenes()

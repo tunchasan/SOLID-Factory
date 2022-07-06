@@ -69,8 +69,8 @@ namespace Factorio.Core.NodeSystem.Processor.Class
 
                     Destroy(processingElement.GetTarget());
 
-                    output = Instantiate(product, transform.position, 
-                        quaternion.identity).gameObject;
+                    output = Instantiate(product, transform).gameObject;
+                    output.transform.SetParent(null);
                     
                     _processorAnimation.Animate(Duration);
                 }

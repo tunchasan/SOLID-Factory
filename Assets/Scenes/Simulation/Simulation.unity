@@ -374,11 +374,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Processor are only capable of upgrading entities sub-behaviours which has
-    IProcessable behaviour. Every received processable entity keeps in Queue until
-    next iteration of Processor starts. In the example, the processor doesn't process
-    the entity which doesn't have IProcessable behaviour. That's why the entities
-    stuck in Processor's entry point.
+  m_text: Processor is only capable of upgrading entities' sub-behaviors whose IProcessable
+    behavior. Every received processable entity keeps in Queue until the next iteration
+    of the Processor starts. In the example, the Processor doesn't process the entity
+    which doesn't have IProcessable behavior. That's why the entities are stuck in
+    Processor's entry point.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1298,7 +1298,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 131.989, y: 20}
+  m_SizeDelta: {x: 144.005, y: 20}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &546886736
 MonoBehaviour:
@@ -1320,11 +1320,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sprayers are only capable of spraying entities which has IPlaceable behaviour.
-    Every received transportable entity keeps in Queue until next iteration of Sprayer
-    starts. Circle is default Sprayer's target area. It's very easy to create new
-    variations like Triangle, Square etc. Also, the area radius can be changed via
-    Inspector with "radius" property.
+  m_text: Sprayers are only capable of spraying entities which has IPlaceable behavior.
+    Every received transportable entity keeps in Queue until the next iteration of
+    Sprayer starts. The Circle is the default Sprayer's target area. It's easy to
+    create new variations like Triangle, Square, etc. Also, the area radius is changeable
+    via Inspector with the "radius" property.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1788,10 +1788,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\rEvery individual components process as Node.\r                                                                          
-    It is a module which has Input, Process and Output operations implementations.
-    Straight Machine searches for it's child elements to find Nodes. Then, bind found
-    nodes each other such like Singly Linked List approach."
+  m_text: Every individual component is processed as Node. It is a module whose Input,
+    Process, and Output operations are implementations. Straight Machine searches
+    for its child elements to find Nodes. Then, bind found nodes to each other such
+    as the Singly Linked List approach.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3401,9 +3401,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The most capable type of tank. Heavy Tanks are slower than Mobile Tanks.
-    However, there is the Placer Unit, which gives the ability to store and place
-    entities. They are also capable of detecting things and navigating around.
+  m_text: The most capable Tank kind. Heavy Tanks are slower than Mobile Tanks. However,
+    there is the Placer Unit, which gives the ability to store and place entities.
+    They are also capable of detecting things and navigating around.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4987,8 +4987,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 119.664, y: 20}
+  m_AnchoredPosition: {x: 0.39, y: 4}
+  m_SizeDelta: {x: 120.863, y: 20}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1780557131
 MonoBehaviour:
@@ -5010,11 +5010,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Placeable Area can be detectable by any Tank kind which has Detector Unit.
-    The area executes it's operation with entity that has IPlaceable behaviour. Also,
-    the area has two different placement type. The first one, organises received
-    entities with special animation. Last one, places the entities where it's received
-    without any animation.
+  m_text: Placeable Areas can be detectable by any Tank kind whose a Detector Unit.
+    The Area executes its operation with the entity that has IPlaceable behavior.
+    Also, the Area has two different placement types. The first one organizes received
+    entities with specific animation. The last one places the entities where they've
+    received without any action.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5272,7 +5272,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.939394, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5333,7 +5333,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 14}
-  m_SizeDelta: {x: 144.007, y: 4}
+  m_SizeDelta: {x: 144.323, y: 4}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1843125234
 MonoBehaviour:
@@ -5355,11 +5355,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Source are an entity which we can apply 5 different behaviours with Composition
-    over Inheritance principle. There is possible to create 48 different sources
-    which has different sub-behaviors than the others. Also, it's possible to make
-    that combinations at runtime! \nFor more technical information, please check
-    the GitHub page and source codes."
+  m_text: "The Source is an entity to which we can apply five different behaviors
+    with the Composition over Inheritance principle. There is possible to create
+    48 variant sources whose different sub-behaviors than the others. Also, it's
+    possible to make that combination at runtime! \nFor more technical information,
+    please check the GitHub page and source codes"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5538,7 +5538,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Stable Tank with lowest specs. Tanks cannot move around. However, they
+  m_text: Stable Tank with the lowest specs. Tanks cannot move around. However, they
     are only capable of detecting and tracking things.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5652,7 +5652,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 2}
-  m_SizeDelta: {x: 136.027, y: 20}
+  m_SizeDelta: {x: 136.933, y: 20}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1986435387
 MonoBehaviour:
@@ -5674,9 +5674,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Conveyor Belts are only capable of carrying entities which has ITransportable
-    behaviour. Every received transportable entity keeps in Queue until next iteration
-    of Conveyor Belt starts.
+  m_text: Conveyor Belts are only capable of carrying entities whose ITransportable
+    behavior. Every received transportable entity keeps in Queue until the next iteration
+    of the Conveyor Belt starts.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

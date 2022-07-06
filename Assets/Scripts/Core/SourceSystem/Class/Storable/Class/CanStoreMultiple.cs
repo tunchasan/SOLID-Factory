@@ -13,6 +13,13 @@ namespace Factorio.Core.SourceSystem.Class.Storable.Class
         public override void PossesBy(Transform instigator)
         {
             Target.transform.SetParent(instigator);
+            
+            // TODO : Refactor
+            
+            if (Target.TryGetComponent(out Collider2D collider))
+            {
+                collider.enabled = false;
+            }
         }
     }
 }
