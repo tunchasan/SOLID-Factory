@@ -1,14 +1,16 @@
 # Project: SOLID Factory
  
-**SOLID Factory** is an Unity2D Project which has been developed to test high-level programming concepts such as ***SOLID***, ***DRY***, ***Separation of Concern***, ***Composition over Inheritance***, ***Maximize Cohesion***, ***Minimize Coupling***, and ***Dependency Injection(Exzenject)*** principles in Unity.
+**SOLID Factory** is a Unity2D Project which has been developed to test high-level programming concepts such as ***SOLID***, ***DRY***, ***Separation of Concern***, ***Composition over Inheritance***, ***Maximize Cohesion***, ***Minimize Coupling***, and ***Dependency Injection(via Exzenject)*** principles in Unity.
 
-I separated the project into two layers. The first layer is the **Core**, which contains whole gameplay and systems implementations. The last layer is **Simulation** which I have designed for simulating the Core layer.
+The project architecture is separated into two layers. The first layer is **Core**, which contains whole gameplay and systems implementations. The last layer is **Simulation** which is designed for simulating the Core layer.
 
-You can find the layers with these directories:
-```Core Layer : Assets/Scripts/Core```
-```Simulation Layer : Assets/Scripts/Simulation```
+Mentioned layers and their assets are available in the following paths:
 
-Also, you can run the **Simulation Scene** which is in the ```Assets/Scenes/Simulation``` directory. When you hit play, the simulation will add 12 scenes. You can zoom in and out by clicking the frame that holds a scene. When you zoom in on a scene, other scenes unload. The load and unload scene operations work async. This significantly reduces the processing intensity.
+```for Core Layer : Assets/Scripts/Core```
+
+```for Simulation Layer : Assets/Scripts/Simulation```
+
+Also, you can run the **Simulation Scene**. It is located under ```Assets/Scenes/Simulation``` in project folders. If you hit play, the simulation system is going to add 12 scenes as additive. You can zoom in and out by clicking the frame that holds a scene. When you zoomed in on a scene, other scenes unload. The load and unload scene operations work as async. Thus significantly reduces the processing intensity.
 
 ### Stable Tank
 
