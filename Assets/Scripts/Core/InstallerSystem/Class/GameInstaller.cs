@@ -20,10 +20,6 @@ namespace Factorio.Core.InstallerSystem.Class
             
             var playerAssetData = Container.InstantiateScriptableObjectResource<PlayerAssetData>("PlayerPresets/PlayerAsset");
             Container.Bind<PlayerAssetData>().FromInstance(playerAssetData);
-            // var player = Container.InstantiatePrefabResource("PlayerPresets/Player").transform;
-            // Container.InstantiatePrefab(playerAssetData.item).transform.SetParent(player);
-            
-            // Container.InstantiatePrefabResource("EnvironmentPresets/Environments");
         }
     }
 }
